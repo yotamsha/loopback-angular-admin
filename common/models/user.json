@@ -53,5 +53,19 @@
       "permission": "ALLOW"
     }
   ],
-  "methods": {}
+  "methods": {
+    "info": {
+      "description": "Get the roles for this user.",
+      "isStatic": false,
+      "returns": {
+        "arg": "result",
+        "type": "Object",
+        "root": true
+      },
+      "http": {
+        "path": "/info",
+        "verb": "get"
+      }
+    }
+  }
 }
