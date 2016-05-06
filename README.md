@@ -81,13 +81,13 @@ Please note, at this moment there is no difference in permissions for admin user
 
 ### Dependencies
 
-Installation depends on `node`/`npm` with `grunt` and `bower` installed globally.
+Installation depends on `node`/`npm` with `bower` installed globally.
 
-    $ npm install -g bower grunt-cli
+    $ npm install -g bower
 
 ### The one-liner install (please create an [issue](https://github.com/beeman/loopback-angular-admin/issues/new) if this one does not work!)
 
-    git clone https://github.com/beeman/loopback-angular-admin.git && cd loopback-angular-admin && npm install && grunt build && grunt serve
+    git clone https://github.com/beeman/loopback-angular-admin.git && cd loopback-angular-admin && npm install && grunt serve
 
 ### The steps above: 
 
@@ -99,20 +99,7 @@ Installation depends on `node`/`npm` with `grunt` and `bower` installed globally
 
     npm install
 
-### Run grunt build:
-
-    grunt build
-    
-### Run grunt serve to start the API and frontend:
-
-    grunt serve
-    
-
 ## Running
-
-The project is separated in a server and a client.
-
-### Server
 
 To run the server you issue the command:
 
@@ -122,21 +109,6 @@ Or to run it with nodemon (needs `nodemon` installed globally). This will
 automatically restart the server when you change its code:
 
     npm run dev
-
-The command `grunt serve` explained below wil automatically start the API.
-
-### Client
-
-Rebuild the lb-services.js file with the correct `API_URL` for development.
-
-    API_URL=http://0.0.0.0:3000/api grunt
-
-To run the client you issue the command. This will also start the API.
-
-    grunt serve
-
-It will open the project in your default browser with livereload enabled.
-This will take care of reloading the page when you change your code.
 
 ## Connect to a database
 
@@ -206,4 +178,4 @@ Here are some projects that are related to what this project does. Please send a
 
 # Issues
 
-If you have any problems please [contact me](https://github.com/beeman/loopback-angular-admin/issues/new).
+If you have any problems please [contact me](https://github.com/beeman/loopback-angular-admin/issues/new). Make sure you mention the branch you are working with!
