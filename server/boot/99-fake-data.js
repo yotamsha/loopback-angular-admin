@@ -1,8 +1,9 @@
 'use strict'
+import { default as debug } from 'debug'
+import Promise from 'bluebird'
+import faker from 'faker'
 
-const log = require('debug')('boot:99-fake.data')
-const faker = require('faker')
-const Promise = require('bluebird')
+const log = debug('boot:99-fake.data')
 
 module.exports = function (app) {
 

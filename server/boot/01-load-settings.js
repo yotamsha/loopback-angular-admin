@@ -1,7 +1,8 @@
 'use strict'
+import { default as debug } from 'debug'
 
 // to enable these logs set `DEBUG=boot:01-load-settings` or `DEBUG=boot:*`
-const log = require('debug')('boot:01-load-settings')
+const log = debug('boot:01-load-settings')
 
 module.exports = function (app) {
 
