@@ -1,6 +1,6 @@
 'use strict'
-
-const Showdown = require('showdown')
+import { Converter } from 'showdown'
+const converter = new Converter()
 
 module.exports = function (Page) {
 
@@ -14,8 +14,6 @@ module.exports = function (Page) {
       content: ` > ${faker.lorem.paragraph()}`,
     })
   }
-
-  const converter = new Showdown.converter() // eslint-disable-line new-cap
 
   Page.html = (id, cb) => {
     Page.findById(id, (err, page) => {
