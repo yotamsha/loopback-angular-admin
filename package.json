@@ -43,8 +43,6 @@
     "eventemitter3": "0.1.6",
     "express-session": "1.10.2",
     "faker": "3.0.1",
-    "get-env": "0.4.0",
-    "gulp-nodemon": "2.0.3",
     "lodash": "3.10.1",
     "loopback": "^2.22.0",
     "loopback-boot": "2.16.0",
@@ -76,14 +74,6 @@
     "gulp-loopback-sdk-angular": "0.1.4",
     "gulp-nodemon": "2.0.3",
     "gulp-rename": "1.2.2",
-    "jasmine-core": "2.2.0",
-    "karma": "0.12.31",
-    "karma-cli": "0.0.4",
-    "karma-coverage": "0.2.7",
-    "karma-jasmine": "0.3.5",
-    "karma-phantomjs-launcher": "0.1.4",
-    "mocha": "2.3.3",
-    "run-sequence": "1.0.2",
-    "tiny-lr": "0.1.5"
+    "run-sequence": "1.0.2"
   }
 }
