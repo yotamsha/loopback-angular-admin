@@ -1,6 +1,8 @@
 'use strict'
 
 module.exports = function (app) {
+  // Do not run if we are in codegen mode.
+  if (process.env.ENV === 'codegen') return
 
   const bodyParser = require('body-parser')
   const loopback = require('loopback')

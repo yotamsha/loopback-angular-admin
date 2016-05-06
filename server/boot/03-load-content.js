@@ -5,6 +5,8 @@ import { default as debug } from 'debug'
 const log = debug('boot:03-load-content')
 
 module.exports = function (app) {
+  // Do not run if we are in codegen mode.
+  if (process.env.ENV === 'codegen') return
 
   if (app.dataSources.db.name !== 'Memory' && !process.env.INITDB) {
     return

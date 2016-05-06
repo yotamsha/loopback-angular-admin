@@ -5,6 +5,8 @@ import { default as debug } from 'debug'
 const log = debug('boot:01-load-settings')
 
 module.exports = function (app) {
+  // Do not run if we are in codegen mode.
+  if (process.env.ENV === 'codegen') return
 
   const Setting = app.models.Setting
 
