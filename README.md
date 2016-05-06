@@ -1,3 +1,6 @@
+# WIP: The develop branch is where the migration to ES6 will happen
+
+For more details check [here](https://github.com/beeman/loopback-angular-admin/issues/179)
 
 # loopback-angular-admin
 
