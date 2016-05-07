@@ -18,4 +18,4 @@ client/coverage
 .config
 .npm
 .env
-client/app/js/lb-services.js
+client/lib/lb-services.js

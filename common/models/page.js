@@ -11,7 +11,7 @@ module.exports = function (Page) {
       id: slug,
       name: name,
       slug: slug,
-      content: ` > ${faker.lorem.paragraph()}`,
+      content: `> ${faker.lorem.paragraph()}`,
     })
   }
 
