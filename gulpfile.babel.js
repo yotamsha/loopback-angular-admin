@@ -46,7 +46,7 @@ gulp.task('loopback:codegen', () => gulp
   .src('./server/server.js')
   .pipe(loopbackAngular({ apiUrl }))
   .pipe(rename('lb-services.js'))
-  .pipe(gulp.dest('./client/app/js'))
+  .pipe(gulp.dest('./src/client/lib'))
 )
 
 // Serve the LoopBack server with nodemon
