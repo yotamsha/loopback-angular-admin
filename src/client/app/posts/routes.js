@@ -44,7 +44,6 @@ angular
       templateUrl: templateUrlForm,
       controllerAs: 'ctrl',
       controller: function editCtrl ($state, PostsService, post) {
-        console.log(post)
         this.post = post
         this.formFields = PostsService.getFormFields()
         this.formOptions = {}

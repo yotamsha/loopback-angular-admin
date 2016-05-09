@@ -29,7 +29,6 @@ app.config($stateProvider => $stateProvider
     templateUrl: templateUrlList,
     controllerAs: 'ctrl',
     controller: function listCtrl (users) {
-      console.log('users', users)
       this.users = users
     },
     resolve: {

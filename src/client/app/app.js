@@ -2,8 +2,8 @@
 
 import angular from 'angular'
 
-import { dependencies } from './dependencies'
-import { modules } from './modules'
+import {dependencies} from './dependencies'
+import {modules} from './modules'
 
 const angularModules = [].concat(dependencies, modules)
 
@@ -56,90 +56,84 @@ const app = angular.module('loopbackApp', angularModules)
 //       country: 'CN',
 //       name: gettextCatalog.getString('Chinese')
 //     }
-//   };
+//   }
 //
-//   var lang = $cookies.lang || navigator.language || navigator.userLanguage;
+//   var lang = $cookies.lang || navigator.language || navigator.userLanguage
 //
-//   $rootScope.locale = $rootScope.locales[lang];
+//   $rootScope.locale = $rootScope.locales[lang]
 //
 //   if (angular.isUndefined($rootScope.locale)) {
-//     $rootScope.locale = $rootScope.locales[lang];
+//     $rootScope.locale = $rootScope.locales[lang]
 //     if (angular.isUndefined($rootScope.locale)) {
-//       $rootScope.locale = $rootScope.locales['en'];
+//       $rootScope.locale = $rootScope.locales['en']
 //     }
 //   }
 //
-//   gettextCatalog.setCurrentLanguage($rootScope.locale.lang);
+//   gettextCatalog.setCurrentLanguage($rootScope.locale.lang)
 //
 // })
-app.run(function(formlyConfig) {
+app.run((formlyConfig) => {
   /*
    ngModelAttrs stuff
    */
-  var ngModelAttrs = {};
+  let ngModelAttrs = {}
 
   function camelize (string) {
     string = string.replace(/[\-_\s]+(.)?/g, function(match, chr) {
-      return chr ? chr.toUpperCase() : '';
-    });
+      return chr ? chr.toUpperCase() : ''
+    })
     // Ensure 1st char is always lowercase
     return string.replace(/^([A-Z])/, function(match, chr) {
-      return chr ? chr.toLowerCase() : '';
-    });
+      return chr ? chr.toLowerCase() : ''
+    })
   }
 
   /*
    timepicker
    */
-  ngModelAttrs = {};
+  ngModelAttrs = {}
 
   // attributes
-  angular.forEach([
-    'meridians',
-    'readonly-input',
-    'mousewheel',
-    'arrowkeys'
-  ], function(attr) {
-    ngModelAttrs[ camelize(attr) ] = { attribute: attr };
-  });
+  angular.forEach([ 'meridians', 'readonly-input', 'mousewheel', 'arrowkeys' ], (attr) => {
+    ngModelAttrs[ camelize(attr) ] = { attribute: attr }
+  })
 
   // bindings
-  angular.forEach([
-    'hour-step',
-    'minute-step',
-    'show-meridian'
-  ], function(binding) {
-    ngModelAttrs[ camelize(binding) ] = { bound: binding };
-  });
+  angular.forEach([ 'hour-step', 'minute-step', 'show-meridian' ], (binding) => {
+    ngModelAttrs[ camelize(binding) ] = { bound: binding }
+  })
 
   formlyConfig.setType({
     name: 'timepicker',
     template: '<timepicker ng-model="model[options.key]"></timepicker>',
     wrapper: [
       'bootstrapLabel',
-      'bootstrapHasError'
+      'bootstrapHasError',
     ],
     defaultOptions: {
       ngModelAttrs: ngModelAttrs,
       templateOptions: {
-        timepickerOptions: {}
-      }
-    }
-  });
+        timepickerOptions: {},
+      },
+    },
+  })
 
   formlyConfig.setType({
     name: 'datepicker',
     template: '<datepicker ng-model="model[options.key]" ></datepicker>',
     wrapper: [
       'bootstrapLabel',
-      'bootstrapHasError'
+      'bootstrapHasError',
     ],
     defaultOptions: {
       ngModelAttrs: ngModelAttrs,
       templateOptions: {
-        datepickerOptions: {}
-      }
-    }
-  });
+        datepickerOptions: {},
+      },
+    },
+  })
 })
 
+app.config([ 'ngToastProvider', (ngToast) => ngToast.configure({
+  verticalPosition: 'bottom',
+}) ])

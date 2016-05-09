@@ -22,7 +22,7 @@ app.config(($stateProvider) => $stateProvider
   })
   .state('app.sandbox.index', {
     url: '',
-    controller: ($state) => $state.go('app.sandbox.forms'),
+    controller: ($state) => $state.go('app.sandbox.bootstrap'),
   })
   .state('app.sandbox.forms', {
     url: '/forms',

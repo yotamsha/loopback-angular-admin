@@ -10,13 +10,12 @@
         <div class="col-md-6">
           <formly-form model="ctrl.page" fields="ctrl.formFields" options="ctrl.formOptions"></formly-form>
 
-          <ui-codemirror ui-codemirror-opts="ctrl.editorOptions" ng-model="ctrl.page.content"></ui-codemirror>
+          <div ui-ace=ctrl.editorOptions ng-model="ctrl.page.content"></div>
 
-          <br/>
         </div>
 
         <div class="col-md-6">
-          <div btf-markdown="ctrl.page.content"></div>
+          <div marked="ctrl.page.content"></div>
         </div>
       </div>
     </div>
@@ -30,13 +29,7 @@
 </form>
 
 <style>
-  .CodeMirror {
-    border: 1px solid #eee;
-    height: auto;
-  }
-
-  .CodeMirror-scroll {
-    overflow-y: hidden;
-    overflow-x: auto;
+  .ace_editor {
+    height: 200px;
   }
 </style>

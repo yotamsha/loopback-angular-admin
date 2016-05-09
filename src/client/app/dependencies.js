@@ -1,4 +1,7 @@
+'use strict'
 import 'angular-animate'
+import 'angular-bootstrap'
+import 'angular-bootstrap-nav-tree'
 import 'angular-cookies'
 import 'angular-filter'
 import 'angular-file-upload'
@@ -7,47 +10,46 @@ import 'angular-formly-templates-bootstrap'
 import 'angular-gettext'
 import 'angular-gravatar'
 import 'angular-loading-bar'
+import 'angular-marked'
 import 'angular-resource'
 import 'angular-route'
 import 'angular-sanitize'
 import 'angular-sweetalert'
-// import 'angular-toastr'
 import 'angular-touch'
-
-import 'codemirror/lib/codemirror'
-
-import 'showdown/dist/showdown'
-
-import 'angular-ui-codemirror'
+import 'angular-ui-grid/ui-grid'
+import 'angular-ui-grid/ui-grid.css'
 import 'angular-ui-router'
-
-import 'angular-markdown-directive'
+import 'ace-editor-builds/src-min-noconflict/ace'
+import 'ace-editor-builds/src-min-noconflict/mode-markdown'
+import 'ace-editor-builds/src-min-noconflict/theme-monokai'
+import 'angular-ui-ace'
+import 'ng-toast'
+import 'ng-toast/dist/ngToast.css'
+import 'sweetalert'
+import 'sweetalert/dist/sweetalert.css'
 
 export const dependencies = [
   'angular-loading-bar',
   'angular.filter',
-  // 'angularBootstrapNavTree',
+  'angularBootstrapNavTree',
   'angularFileUpload',
-  'btford.markdown',
+  'hc.marked',
   'oitozero.ngSweetAlert',
   'config',
   'formly',
   'formlyBootstrap',
   'lbServices',
-  // 'monospaced.elastic',
   'ngAnimate',
   'ngCookies',
   'ngResource',
   'ngRoute',
   'ngSanitize',
   'ngTouch',
-  // 'ui.bootstrap',
-  'ui.codemirror',
+  'ui.ace',
+  'ui.bootstrap',
   'ui.gravatar',
-  // 'ui.grid',
+  'ui.grid',
   'ui.router',
-  // 'toastr',
+  'ngToast',
   'gettext',
-  // 'angular-underscore/filters',
-  // 'ui.select',
 ]

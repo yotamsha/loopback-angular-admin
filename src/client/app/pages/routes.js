@@ -31,9 +31,8 @@ app.config(($stateProvider) => $stateProvider
     controllerAs: 'ctrl',
     controller: function ctrl ($state, PageService, page) {
       this.editorOptions = {
+        useWrapMode: true,
         theme: 'monokai',
-        lineWrapping: true,
-        lineNumbers: true,
         mode: 'markdown',
       }
       this.page = page
