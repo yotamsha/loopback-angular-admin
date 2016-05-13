@@ -14,11 +14,14 @@
     "url": "https://github.com/beeman/loopback-angular-admin/issues"
   },
   "scripts": {
-    "test": "mocha",
-    "start": "./node_modules/.bin/babel-node server/server",
+    "build": "rimraf dist && webpack --bail --progress --profile",
+    "dev": "DEBUG=boot:* INITDB=1 API_URL=http://localhost:3000/api/ gulp",
+    "dev-client": "webpack-dev-server",
+    "dev-debug": "DEBUG_API=1 gulp",
+    "postinstall": "npm run build",
     "pretest": "gulp lint",
-    "dev": "gulp",
-    "dev-debug": "DEBUG_API=1 gulp"
+    "start": "./node_modules/.bin/babel-node server/server",
+    "test": "mocha"
   },
   "main": "server/server.js",
   "dependencies": {
@@ -53,6 +56,7 @@
     "passport-local": "1.0.0",
     "passport-oauth2": "1.3.0",
     "passport-twitter": "1.0.4",
+    "rimraf": "2.5.2",
     "serve-favicon": "2.3.0",
     "serve-static": "1.10.2",
     "showdown": "1.3.0",

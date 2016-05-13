@@ -2,6 +2,35 @@
 
 For more details check [here](https://github.com/beeman/loopback-angular-admin/issues/179)
 
+## Quick-start for the development branch
+
+The steps of running the server and client will be simplified, but for now this is the gist:
+
+Clone the repo with the correct branch and move into the directory
+
+    $ git clone -b develop https://github.com/beeman/loopback-angular-admin.git loopback-angular-admin-develop
+    $ cd loopback-angular-admin-develop
+
+Install the dependencies
+
+    $ npm install
+
+Create a 'dotenv' file
+
+    $ cp .env.example .env
+
+Start the server with debugging of the boot scripts and INITDB enabled:
+
+    $ DEBUG=boot:* INITDB=1 API_URL=http://localhost:3000/api/ npm start
+
+The command above should give you a working version of the app on port 3000 and you should be able to log in using `admin@admin.com` / `admin`.
+
+In a separate shell run the following command to start the client
+
+    $ npm run dev-client
+
+This should open your browser and after a couple of seconds, when webpack finished building the client, you should be able to log in and have the client out-refresh if you make changes to it.
+
 # loopback-angular-admin
 
 The goal is to have a starter project which can be used to quickly build an API with a frontend that are easily extended.
