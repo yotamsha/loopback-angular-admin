@@ -53,7 +53,7 @@ function SandboxTreesCtrl ($scope, $timeout) {
       dataCanContainAnything: true,
     },
     onSelect: (branch) => {
-      $scope.output = 'Vegetable: ' + branch.data.definition
+      $scope.output = `Vegetable: ${branch.data.definition}`
       return $scope.output
     },
     children: [ {

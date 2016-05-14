@@ -11,17 +11,18 @@ const MODULES = [
 ]
 
 angular.module(NAME, MODULES)
-  .run(function($rootScope, gettextCatalog) {
+  .run(($rootScope, gettextCatalog) => {
     $rootScope.addMenu(gettextCatalog.getString('Settings'),
-      'app.settings.list', 'fa-cog');
+      'app.settings.list', 'fa-cog')
 
-    $rootScope.getSetting = function(key) {
-      var valor = '';
-      angular.forEach($rootScope.settings.data, function(item) {
+    $rootScope.getSetting = (key) => {
+      let value = ''
+
+      angular.forEach($rootScope.settings.data, (item) => {
         if (item.key === key) {
-          valor = item.value;
+          value = item.value
         }
-      });
-      return valor;
-    };
+      })
+      return value
+    }
   })

@@ -3,55 +3,42 @@ import angular from 'angular'
 
 function PageService ($state, CoreService, Page, gettextCatalog) {
 
-  this.find = function() {
-    return Page.find().$promise
-  }
+  this.find = () => Page.find().$promise
 
-  this.findById = function(id) {
-    return Page.findById({
-      id: id
-    }).$promise
-  }
+  this.findById = (id) => Page.findById({ id }).$promise
 
-  this.upsert = function(page) {
-    return Page.upsert(page).$promise
-      .then(function() {
-        CoreService.toastSuccess(
-          gettextCatalog.getString('Page saved'),
-          gettextCatalog.getString('Your page is safe with us!')
-        )
-      })
-      .catch(function(err) {
-          CoreService.toastError(
-            gettextCatalog.getString('Error saving page '),
-            gettextCatalog.getString('This page could no be saved: ' + err)
-          )
-        }
+  this.upsert = (page) => Page.upsert(page).$promise
+    .then(() => CoreService.toastSuccess(
+      gettextCatalog.getString('Page saved'),
+      gettextCatalog.getString('Your page is safe with us!')
       )
-  }
-
-  this.delete = (id, successCb, cancelCb) => {
-    CoreService.confirm(
-      gettextCatalog.getString('Are you sure?'),
-      gettextCatalog.getString('Deleting this cannot be undone'),
-      () => {
-        Page.deleteById({ id: id },
-          () => {
-            CoreService.toastSuccess(
-              gettextCatalog.getString('Page deleted'),
-              gettextCatalog.getString('Your page is deleted!'))
-            successCb()
-          },
-          (err) => {
-            CoreService.toastError(
-              gettextCatalog.getString('Error deleting page'),
-              gettextCatalog.getString(`Your page is not deleted! ${err}`))
-            cancelCb()
-          })
-      },
-      () => cancelCb()
     )
-  }
+    .catch((err) => CoreService.toastError(
+      gettextCatalog.getString('Error saving page '),
+      gettextCatalog.getString(`This page could no be saved: ${err}`)
+      )
+    )
+
+  this.delete = (id, successCb, cancelCb) => CoreService.confirm(
+    gettextCatalog.getString('Are you sure?'),
+    gettextCatalog.getString('Deleting this cannot be undone'),
+    () => {
+      Page.deleteById({ id: id },
+        () => {
+          CoreService.toastSuccess(
+            gettextCatalog.getString('Page deleted'),
+            gettextCatalog.getString('Your page is deleted!'))
+          successCb()
+        },
+        (err) => {
+          CoreService.toastError(
+            gettextCatalog.getString('Error deleting page'),
+            gettextCatalog.getString(`Your page is not deleted! ${err}`))
+          cancelCb()
+        })
+    },
+    () => cancelCb()
+  )
 
   this.getFormFields = () => [ {
     key: 'name',

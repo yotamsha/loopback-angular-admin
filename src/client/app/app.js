@@ -79,11 +79,11 @@ app.run((formlyConfig) => {
   let ngModelAttrs = {}
 
   function camelize (string) {
-    string = string.replace(/[\-_\s]+(.)?/g, function(match, chr) {
+    string = string.replace(/[\-_\s]+(.)?/g, (match, chr) => {
       return chr ? chr.toUpperCase() : ''
     })
     // Ensure 1st char is always lowercase
-    return string.replace(/^([A-Z])/, function(match, chr) {
+    return string.replace(/^([A-Z])/, (match, chr) => {
       return chr ? chr.toLowerCase() : ''
     })
   }

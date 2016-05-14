@@ -3,7 +3,7 @@ import angular from 'angular'
 
 function FileService ($http, CoreService, Setting, gettextCatalog) {
 
-  this.find = () => $http.get(CoreService.env.apiUrl + '/containers/files/files')
+  this.find = () => $http.get(`${CoreService.env.apiUrl}/containers/files/files`)
     .success((res) => res.data)
 
   this.delete = (id, successCb, cancelCb) => {
@@ -11,15 +11,15 @@ function FileService ($http, CoreService, Setting, gettextCatalog) {
       gettextCatalog.getString('Are you sure?'),
       gettextCatalog.getString('Deleting this cannot be undone'),
       () => {
-        $http.delete(CoreService.env.apiUrl +
-          '/containers/files/files/' + encodeURIComponent(id)).success(
-          () => {
-            CoreService.toastSuccess(
-              gettextCatalog.getString('File deleted'),
-              gettextCatalog.getString('Your file is deleted!')
-            )
-            successCb()
-          })
+        $http.delete(`${CoreService.env.apiUrl}/containers/files/files/${encodeURIComponent(id)}`)
+          .success(
+            () => {
+              CoreService.toastSuccess(
+                gettextCatalog.getString('File deleted'),
+                gettextCatalog.getString('Your file is deleted!')
+              )
+              successCb()
+            })
       }, (err) => {
         CoreService.toastError(
           gettextCatalog.getString('Error deleting file'),

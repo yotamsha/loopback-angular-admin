@@ -13,7 +13,7 @@ const exec = debugEnabled ? `${babelNode} --debug` : `${babelNode}`
 // ESLint configuration
 gulp.task('lint', () => gulp
   .src([
-    // 'client/**/*.js',
+    'src/client/**/*.js',
     'common/**/*.js',
     'server/**/*.js',
   ])

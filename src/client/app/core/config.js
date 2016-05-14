@@ -10,7 +10,7 @@ app.config((cfpLoadingBarProvider) => {
 app.run(($rootScope, Setting, gettextCatalog) => {
 
   // Left Sidemenu
-  $rootScope.menu = [];
+  $rootScope.menu = []
 
   // Add Sidebar Menu
   $rootScope.addMenu = (name, sref, icon) => $rootScope.menu.push({ name, sref, icon })
