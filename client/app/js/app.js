@@ -43,7 +43,6 @@
       'com.module.browser',
       'com.module.events',
       'com.module.files',
-      'com.module.notes',
       'com.module.pages',
       'com.module.posts',
       'com.module.products',

@@ -19,9 +19,6 @@ module.exports = function (app) {
     Event: {
       count: 15
     },
-    Note: {
-      count: 15
-    },
     Page: {
       count: 15
     }

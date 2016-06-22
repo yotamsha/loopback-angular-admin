@@ -5,7 +5,7 @@
     .service('FakeService', function ($window) {
       this.faker = $window.faker;
     })
-    .controller('SandboxFakerCtrl', function ($scope, $window, CoreService, FakeService, Event, Post, User, Page, Note) {
+    .controller('SandboxFakerCtrl', function ($scope, $window, CoreService, FakeService, Event, Post, User, Page) {
       $scope.faker = [];
 
       $scope.records = 10;
@@ -53,19 +53,6 @@
           Page.create(fake);
         }
         CoreService.toastSuccess('Created ' + $scope.records + ' pages');
-      };
-
-      $scope.fakeNotes = function () {
-        $scope.faker = [];
-        for (var i = 1; i <= $scope.records; i++) {
-          var fake = {
-            title: FakeService.faker.lorem.sentence(),
-            body: FakeService.faker.lorem.paragraph()
-          };
-          $scope.faker.push(fake);
-          Note.create(fake);
-        }
-        CoreService.toastSuccess('Created ' + $scope.records + ' notes');
       };
 
       $scope.fakeEvents = function () {
