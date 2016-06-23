@@ -145,8 +145,15 @@ You can specify the URL to the MongoDB database you want to use with the `MONGOD
 
     MONGODB_URL="mongodb://localhost:27017/loopback-angular-admin" npm start
 
-Set `INITDB` to true if you want to load the initial dataset, which creates the admin user. The memory database (default) does this automatically.
+If you use mysql or postgres, you'll need to setup the tables first. in order to do so, you can run `node auto-migrate` (Make sure
+all the relevant tables are there).
 
+Set `INITDB` to true if you want to load the initial dataset, which creates the admin user. The memory database (default) does this automatically.
+    In windows:
+    Set INITDB=true
+    grunt serve
+
+    Linux
     INITDB=true MONGODB_URL="mongodb://localhost:27017/loopback-angular-admin" npm start
 
 This also works with the free hosted MongoDB instances at [compose.io](https://www.compose.io) and [mongolab.com](https://mongolab.com)!

@@ -1,7 +1,7 @@
 {
   "name": "Category",
   "plural": "categories",
-  "base": "PersistedModel",
+  "base": "AppModel",
   "properties": {
     "name": {
       "type": "string"
@@ -13,6 +13,11 @@
       "type": "hasMany",
       "model": "Product",
       "foreignKey": "categoryId"
+    },
+    "posts": {
+      "type": "hasAndBelongsToMany",
+      "model": "Post",
+      "foreignKey": ""
     }
   },
   "acls": [],
