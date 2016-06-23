@@ -22,6 +22,7 @@
       'lbServices',
       'monospaced.elastic',
       'ngAnimate',
+      'ngAria',
       'ngCookies',
       'ngResource',
       'ngRoute',
