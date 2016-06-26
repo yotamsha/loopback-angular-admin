@@ -1,0 +1,28 @@
+{
+  "name": "Committee",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "mKs": {
+      "type": "hasAndBelongsToMany",
+      "model": "MK",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,17 +1,17 @@
 /**
  * Created by yotam on 21/06/2016.
  */
-
+process.env.DB_MIGRATION = true;
 var app = require('./server');
 var ds = app.dataSources.db;
-var lbTables = [
+/*var lbTables = [
     "User", "accessToken", "userCredential", "userIdentity",
     "ACL", "RoleMapping", "Role", "AppModel", "Page", "Post",
     "Setting", "Product", "Category", "Event", "AuthProvider", "Meta"
-];
-ds.automigrate(lbTables, function (er) {
+];*/
+ds.automigrate(null, function (er) {
     if (er) throw er;
-    console.log('Loopback tables [' + lbTables + '] created in ', ds.adapter.name);
+    console.log('Loopback tables created in ', ds.adapter.name);
     ds.disconnect();
 });
 

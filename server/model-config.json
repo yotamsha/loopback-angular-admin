@@ -81,5 +81,13 @@
   "Meta": {
     "dataSource": "db",
     "public": true
+  },
+  "Committee": {
+    "dataSource": "db",
+    "public": true
+  },
+  "MK": {
+    "dataSource": "db",
+    "public": true
   }
 }
