@@ -4,12 +4,12 @@
     .module('com.module.products')
     .config(function ($stateProvider) {
       $stateProvider
-        .state('app.products', {
+        .state('app.admin.products', {
           abstract: true,
           url: '/products',
           templateUrl: 'modules/products/views/main.html'
         })
-        .state('app.products.list', {
+        .state('app.admin.products.list', {
           url: '',
           templateUrl: 'modules/products/views/list.html',
           controllerAs: 'ctrl',
@@ -25,7 +25,7 @@
             ]
           }
         })
-        .state('app.products.add', {
+        .state('app.admin.products.add', {
           url: '/add/:categoryId',
           templateUrl: 'modules/products/views/form.html',
           controllerAs: 'ctrl',
@@ -51,7 +51,7 @@
             }
           }
         })
-        .state('app.products.edit', {
+        .state('app.admin.products.edit', {
           url: '/:productId/edit',
           templateUrl: 'modules/products/views/form.html',
           controllerAs: 'ctrl',
@@ -75,7 +75,7 @@
             }
           }
         })
-        .state('app.products.addcategory', {
+        .state('app.admin.products.addcategory', {
           url: '/addcategory',
           templateUrl: 'modules/products/views/categoryform.html',
           controllerAs: 'ctrl',
@@ -95,7 +95,7 @@
             }
           }
         })
-        .state('app.products.view', {
+        .state('app.admin.products.view', {
           url: '/:productId',
           templateUrl: 'modules/products/views/view.html',
           controllerAs: 'ctrl',
@@ -109,7 +109,7 @@
             }
           }
         })
-        .state('app.products.editcategory', {
+        .state('app.admin.products.editcategory', {
           url: '/editcategory/:categoryId',
           templateUrl: 'modules/products/views/categoryform.html',
           controllerAs: 'ctrl',
@@ -129,7 +129,7 @@
             }
           }
         })
-        .state('app.products.deletecategory', {
+        .state('app.admin.products.deletecategory', {
           url: '/category/:categoryId/delete',
           template: '',
           controllerAs: 'ctrl',
@@ -146,7 +146,7 @@
             }
           }
         })
-        .state('app.products.delete', {
+        .state('app.admin.products.delete', {
           url: '/:productId/delete',
           template: '',
           controllerAs: 'ctrl',

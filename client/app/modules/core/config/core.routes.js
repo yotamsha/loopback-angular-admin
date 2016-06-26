@@ -13,17 +13,36 @@
           url: '/error',
           template: '<div class="text-center alert alert-danger" style="margin: 100px">An error occurred.</div>'
         })
+
         .state('app', {
           abstract: true,
-          url: '/app',
+          url: '',
           templateUrl: 'modules/core/views/app.html',
           controller: 'MainCtrl'
         })
-        .state('app.home', {
+        .state('app.public', {
+          abstract: true,
+          url: '/home',
+          templateUrl: 'modules/core/views/public.html',
+        })
+
+        .state('app.public.home', {
           url: '',
-          templateUrl: 'modules/core/views/home.html',
+          templateUrl: 'modules/core/views/public/home.html',
+          controller: 'HomeCtrl'
+        })
+        .state('app.admin', {
+          abstract: true,
+          url: '/admin',
+          templateUrl: 'modules/core/views/admin.html',
+
+        })
+        .state('app.admin.home', {
+          url: '',
+          templateUrl: 'modules/core/views/admin/home.html',
           controller: 'HomeCtrl'
         });
+
       $urlRouterProvider.otherwise('/router');
     });
 

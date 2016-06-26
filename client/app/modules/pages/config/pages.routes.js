@@ -5,12 +5,12 @@
     .module('com.module.pages')
     .config(function ($stateProvider) {
       $stateProvider
-        .state('app.pages', {
+        .state('app.admin.pages', {
           abstract: true,
           url: '/pages',
           templateUrl: 'modules/pages/views/main.html'
         })
-        .state('app.pages.list', {
+        .state('app.admin.pages.list', {
           url: '',
           templateUrl: 'modules/pages/views/list.html',
           controllerAs: 'ctrl',
@@ -23,7 +23,7 @@
             }
           }
         })
-        .state('app.pages.add', {
+        .state('app.admin.pages.add', {
           url: '/add',
           templateUrl: 'modules/pages/views/form.html',
           controllerAs: 'ctrl',
@@ -52,7 +52,7 @@
             }
           }
         })
-        .state('app.pages.edit', {
+        .state('app.admin.pages.edit', {
           url: '/:id/edit',
           templateUrl: 'modules/pages/views/form.html',
           controllerAs: 'ctrl',
@@ -78,7 +78,7 @@
             }
           }
         })
-        .state('app.pages.view', {
+        .state('app.admin.pages.view', {
           url: '/:id',
           templateUrl: 'modules/pages/views/view.html',
           controllerAs: 'ctrl',
@@ -91,7 +91,7 @@
             }
           }
         })
-        .state('app.pages.delete', {
+        .state('app.admin.pages.delete', {
           url: '/:id/delete',
           template: '',
           controllerAs: 'ctrl',

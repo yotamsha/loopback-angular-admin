@@ -23,7 +23,7 @@
       };
 
       // Add Menu Dashboard
-      $rootScope.addMenu(gettextCatalog.getString('Dashboard'), 'app.home',
+      $rootScope.addMenu(gettextCatalog.getString('Dashboard'), 'app.admin.home',
         'fa-dashboard');
 
       // Dashboard

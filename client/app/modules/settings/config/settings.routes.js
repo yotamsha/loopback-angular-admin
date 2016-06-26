@@ -4,12 +4,12 @@
     .module('com.module.settings')
     .config(function ($stateProvider) {
       $stateProvider
-        .state('app.settings', {
+        .state('app.admin.settings', {
           abstract: true,
           url: '/settings',
           templateUrl: 'modules/settings/views/main.html'
         })
-        .state('app.settings.list', {
+        .state('app.admin.settings.list', {
           url: '',
           templateUrl: 'modules/settings/views/list.html',
           controllerAs: 'ctrl',
@@ -22,7 +22,7 @@
             }
           }
         })
-        .state('app.settings.add', {
+        .state('app.admin.settings.add', {
           url: '/add',
           templateUrl: 'modules/settings/views/form.html',
           controllerAs: 'ctrl',
@@ -42,7 +42,7 @@
             }
           }
         })
-        .state('app.settings.edit', {
+        .state('app.admin.settings.edit', {
           url: '/:id/edit',
           templateUrl: 'modules/settings/views/form.html',
           controllerAs: 'ctrl',
@@ -62,7 +62,7 @@
             }
           }
         })
-        .state('app.settings.view', {
+        .state('app.admin.settings.view', {
           url: '/:id',
           templateUrl: 'modules/settings/views/view.html',
           controllerAs: 'ctrl',
@@ -75,7 +75,7 @@
             }
           }
         })
-        .state('app.settings.delete', {
+        .state('app.admin.settings.delete', {
           url: '/:id/delete',
           template: '',
           controllerAs: 'ctrl',

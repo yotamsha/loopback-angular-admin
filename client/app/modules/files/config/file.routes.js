@@ -4,12 +4,12 @@
     .module('com.module.files')
     .config(function ($stateProvider) {
       $stateProvider
-        .state('app.files', {
+        .state('app.admin.files', {
           abstract: true,
           url: '/files',
           templateUrl: 'modules/files/views/main.html'
         })
-        .state('app.files.list', {
+        .state('app.admin.files.list', {
           url: '',
           templateUrl: 'modules/files/views/list.html',
           controllerAs: 'ctrl',
@@ -22,7 +22,7 @@
             }
           }
         })
-        .state('app.files.upload', {
+        .state('app.admin.files.upload', {
           url: '/upload',
           templateUrl: 'modules/files/views/upload.html',
           controllerAs: 'ctrl',
@@ -37,7 +37,7 @@
             });
           }
         })
-        .state('app.files.delete', {
+        .state('app.admin.files.delete', {
           url: '/:fileName/delete',
           template: '',
           controllerAs: 'ctrl',

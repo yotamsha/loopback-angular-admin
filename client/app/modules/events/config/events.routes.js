@@ -4,12 +4,12 @@
     .module('com.module.events')
     .config(function ($stateProvider) {
       $stateProvider
-        .state('app.events', {
+        .state('app.admin.events', {
           abstract: true,
           url: '/events',
           templateUrl: 'modules/events/views/main.html'
         })
-        .state('app.events.list', {
+        .state('app.admin.events.list', {
           url: '',
           templateUrl: 'modules/events/views/list.html',
           controllerAs: 'ctrl',
@@ -22,7 +22,7 @@
             }
           }
         })
-        .state('app.events.add', {
+        .state('app.admin.events.add', {
           url: '/add',
           templateUrl: 'modules/events/views/form.html',
           controllerAs: 'ctrl',
@@ -42,7 +42,7 @@
             }
           }
         })
-        .state('app.events.edit', {
+        .state('app.admin.events.edit', {
           url: '/:id/edit',
           templateUrl: 'modules/events/views/form.html',
           controllerAs: 'ctrl',
@@ -63,7 +63,7 @@
             }
           }
         })
-        .state('app.events.view', {
+        .state('app.admin.events.view', {
           url: '/:id',
           templateUrl: 'modules/events/views/view.html',
           controllerAs: 'ctrl',
@@ -76,7 +76,7 @@
             }
           }
         })
-        .state('app.events.delete', {
+        .state('app.admin.events.delete', {
           url: '/:id/delete',
           template: '',
           controllerAs: 'ctrl',

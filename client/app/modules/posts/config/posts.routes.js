@@ -4,12 +4,12 @@
     .module('com.module.posts')
     .config(function ($stateProvider) {
       $stateProvider
-        .state('app.posts', {
+        .state('app.admin.posts', {
           abstract: true,
           url: '/posts',
           templateUrl: 'modules/posts/views/main.html'
         })
-        .state('app.posts.list', {
+        .state('app.admin.posts.list', {
           url: '',
           templateUrl: 'modules/posts/views/list.html',
           controllerAs: 'ctrl',
@@ -25,7 +25,7 @@
             ]
           }
         })
-        .state('app.posts.add', {
+        .state('app.admin.posts.add', {
           url: '/add',
           templateUrl: 'modules/posts/views/form.html',
           controllerAs: 'ctrl',
@@ -45,7 +45,7 @@
             }
           }
         })
-        .state('app.posts.edit', {
+        .state('app.admin.posts.edit', {
           url: '/:id/edit',
           templateUrl: 'modules/posts/views/form.html',
           controllerAs: 'ctrl',
@@ -66,7 +66,7 @@
             }
           }
         })
-        .state('app.posts.view', {
+        .state('app.admin.posts.view', {
           url: '/:id',
           templateUrl: 'modules/posts/views/view.html',
           controllerAs: 'ctrl',
@@ -79,7 +79,7 @@
             }
           }
         })
-        .state('app.posts.delete', {
+        .state('app.admin.posts.delete', {
           url: '/:id/delete',
           template: '',
           controllerAs: 'ctrl',

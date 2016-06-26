@@ -14,12 +14,12 @@
           template: '<register></register>',
           controller: 'RegisterCtrl'
         })
-        .state('app.users', {
+        .state('app.admin.users', {
           abstract: true,
           url: '/users',
           templateUrl: 'modules/users/views/main.html'
         })
-        .state('app.users.list', {
+        .state('app.admin.users.list', {
           url: '',
           templateUrl: 'modules/users/views/list.html',
           controllerAs: 'ctrl',
@@ -34,7 +34,7 @@
             }
           }
         })
-        .state('app.users.add', {
+        .state('app.admin.users.add', {
           url: '/add',
           templateUrl: 'modules/users/views/form.html',
           controllerAs: 'ctrl',
@@ -56,7 +56,7 @@
             }
           }
         })
-        .state('app.users.edit', {
+        .state('app.admin.users.edit', {
           url: '/edit/:id',
           templateUrl: 'modules/users/views/form.html',
           controllerAs: 'ctrl',
@@ -76,7 +76,7 @@
             }
           }
         })
-        .state('app.users.view', {
+        .state('app.admin.users.view', {
           url: '/view/:id',
           templateUrl: 'modules/users/views/view.html',
           controllerAs: 'ctrl',
@@ -89,7 +89,7 @@
             }
           }
         })
-        .state('app.users.delete', {
+        .state('app.admin.users.delete', {
           url: '/:id/delete',
           template: '',
           controller: function ($stateParams, $state, UserService) {
@@ -100,7 +100,7 @@
             });
           }
         })
-        .state('app.users.profile', {
+        .state('app.admin.users.profile', {
           url: '/profile',
           templateUrl: 'modules/users/views/profile.html',
           controllerAs: 'ctrl',
