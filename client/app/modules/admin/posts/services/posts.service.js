@@ -6,7 +6,7 @@
       this.getPosts = function () {
         return Post.find({
           filter: {
-            order: 'created DESC'
+            order: 'createdAt DESC'
           }
         }).$promise;
       };
@@ -68,6 +68,28 @@
             }
           },
           {
+            key: 'subtitle',
+            type: 'input',
+            templateOptions: {
+              label: gettextCatalog.getString('Subtitle'),
+              required: true
+            }
+          },
+          {
+            key: 'permaLink',
+            type: 'input',
+            templateOptions: {
+              label: gettextCatalog.getString('Permalink')
+            }
+          },
+          {
+            key: 'meetingDate',
+            type: 'datepicker',
+            templateOptions: {
+              label: gettextCatalog.getString('Committee Meeting Date')
+            }
+          },
+          {
             key: 'content',
             type: 'textarea',
             templateOptions: {
@@ -76,12 +98,35 @@
             }
           },
           {
-            key: 'image',
+            key: 'mainImage',
             type: 'input',
             templateOptions: {
-              label: gettextCatalog.getString('Image')
+              label: gettextCatalog.getString('Main Image')
             }
-          }
+          },
+          {
+            key: 'featuredImage',
+            type: 'input',
+            templateOptions: {
+              label: gettextCatalog.getString('Featured Image')
+            }
+          },
+          {
+            key: 'fbImage',
+            type: 'input',
+            templateOptions: {
+              label: gettextCatalog.getString('Facebook Image')
+            }
+          },
+          {
+            key: 'status',
+            type: 'input',
+            templateOptions: {
+              label: gettextCatalog.getString('Status')
+            }
+          },
+
+
         ];
       };
 

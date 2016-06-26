@@ -24,10 +24,10 @@
         <br/>
         <small>
           Created:
-          {{item.created | date:'medium'}}
-            <span ng-if="item.created !== item.modified">
+          {{item.createdAt | date:'medium'}}
+            <span ng-if="item.createdAt !== item.updatedAt">
               &middot; modified:
-              {{item.modified | date:'medium'}}
+              {{item.updatedAt | date:'medium'}}
             </span>
         </small>
       </h4>

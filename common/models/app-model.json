@@ -2,10 +2,10 @@
   "name": "AppModel",
   "base": "PersistedModel",
   "properties": {
-    "created": {
+    "createdAt": {
       "type": "date"
     },
-    "modified": {
+    "updatedAt": {
       "type": "date"
     }
   },

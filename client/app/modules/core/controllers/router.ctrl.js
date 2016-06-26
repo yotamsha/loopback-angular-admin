@@ -20,7 +20,7 @@
           if (!AppAuth.currentUser) {
             $location.path('/login');
           } else {
-            $location.path('/home');
+            $location.path('/admin');
           }
         })
         .catch(function (err) {

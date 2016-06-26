@@ -7,11 +7,11 @@
         .state('app.admin.posts', {
           abstract: true,
           url: '/posts',
-          templateUrl: 'modules/posts/views/main.html'
+          templateUrl: 'modules/admin/posts/views/main.html'
         })
         .state('app.admin.posts.list', {
           url: '',
-          templateUrl: 'modules/posts/views/list.html',
+          templateUrl: 'modules/admin/posts/views/list.html',
           controllerAs: 'ctrl',
           controller: function (posts) {
             this.posts = posts;
@@ -27,7 +27,7 @@
         })
         .state('app.admin.posts.add', {
           url: '/add',
-          templateUrl: 'modules/posts/views/form.html',
+          templateUrl: 'modules/admin/posts/views/form.html',
           controllerAs: 'ctrl',
           controller: function ($state, PostsService, post) {
             this.post = post;
@@ -47,7 +47,7 @@
         })
         .state('app.admin.posts.edit', {
           url: '/:id/edit',
-          templateUrl: 'modules/posts/views/form.html',
+          templateUrl: 'modules/admin/posts/views/form.html',
           controllerAs: 'ctrl',
           controller: function ($state, PostsService, post) {
             console.log(post);
@@ -68,7 +68,7 @@
         })
         .state('app.admin.posts.view', {
           url: '/:id',
-          templateUrl: 'modules/posts/views/view.html',
+          templateUrl: 'modules/admin/posts/views/view.html',
           controllerAs: 'ctrl',
           controller: function (post) {
             this.post = post;

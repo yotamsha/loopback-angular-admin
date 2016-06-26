@@ -22,10 +22,10 @@
   <div class="panel-footer">
     <small>
       Created:
-      {{ctrl.post.created | date:'medium'}}
-      <span ng-if="ctrl.post.created !== ctrl.post.modified">
+      {{ctrl.post.createdAt | date:'medium'}}
+      <span ng-if="ctrl.post.createdAt !== ctrl.post.updatedAt">
         &middot; modified:
-        {{ctrl.post.modified | date:'medium'}}
+        {{ctrl.post.updatedAt | date:'medium'}}
       </span>
     </small>
   </div>
