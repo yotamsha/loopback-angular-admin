@@ -1,50 +1,49 @@
 (function () {
   'use strict';
   angular
-    .module('com.module.products')
-    .service('CategoriesService', function (CoreService, Category, gettextCatalog) {
+    .module('com.module.committees')
+    .service('CommitteesService', function (CoreService, Committee, gettextCatalog) {
 
-      this.getCategories = function () {
-        return Category.find({
+      this.getCommittees = function () {
+        return Committee.find({
           filter: {
             order: 'name ASC',
           }
         }).$promise;
       };
 
-      this.getCategory = function (id) {
-        return Category.findOne({
-          where: {
+      this.getCommittee = function (id) {
+        return Committee.findById({
             id: id
           }
-        }).$promise;
+        ).$promise;
       };
 
-      this.upsertCategory = function (category) {
-        return Category.upsert(category).$promise
+      this.upsertCommittee = function (category) {
+        return Committee.upsert(category).$promise
           .then(function () {
             CoreService.toastSuccess(
-              gettextCatalog.getString('Category saved'),
+              gettextCatalog.getString('Committee saved'),
               gettextCatalog.getString('Your category is safe with us!')
             );
           })
           .catch(function (err) {
-            CoreService.toastSuccess(
-              gettextCatalog.getString('Error saving category '),
-              gettextCatalog.getString('This category could no be saved: ') + err
-            );
-          }
-        );
+              CoreService.toastSuccess(
+                gettextCatalog.getString('Error saving category '),
+                gettextCatalog.getString('This category could no be saved: ') + err
+              );
+            }
+          );
       };
 
-      this.deleteCategory = function (id, successCb, cancelCb) {
+      this.deleteCommittee = function (id, successCb, cancelCb) {
         CoreService.confirm(
           gettextCatalog.getString('Are you sure?'),
           gettextCatalog.getString('Deleting this cannot be undone'),
           function () {
-            Category.deleteById({id: id}, function () {
+            Committee.deleteById({id: id}, function () {
               CoreService.toastSuccess(
-                gettextCatalog.getString('Category deleted'),
+                gettextCatalog.getString('Committee deleted'),
                 gettextCatalog.getString('Your category is deleted!'));
               successCb();
             }, function (err) {
@@ -68,6 +67,14 @@
             templateOptions: {
               label: gettextCatalog.getString('Name'),
               required: true
+            }
+          },
+          {
+            key: 'slug',
+            type: 'input',
+            templateOptions: {
+              label: gettextCatalog.getString('Slug'),
+              required: false
             }
           }
         ];

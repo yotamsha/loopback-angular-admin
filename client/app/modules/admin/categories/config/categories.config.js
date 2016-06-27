@@ -6,7 +6,7 @@
       $rootScope.addMenu(gettextCatalog.getString('Categories'), 'app.admin.categories.list', 'fa-edit');
 
       Category.find(function (categories) {
-        $rootScope.addDashboardBox(gettextCatalog.getString('Categories'), 'bg-red', 'ion-document-text', categories.length, 'app.admin.categories.list');
+        $rootScope.addDashboardBox(gettextCatalog.getString('Categories'), 'bg-yellow', 'ion-document-text', categories.length, 'app.admin.categories.list');
       });
 
     });

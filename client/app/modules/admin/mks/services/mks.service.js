@@ -71,6 +71,14 @@
             }
           },
           {
+            key: 'slug',
+            type: 'input',
+            templateOptions: {
+              label: gettextCatalog.getString('Slug'),
+              required: false
+            }
+          },
+          {
             key: 'email',
             type: 'input',
             templateOptions: {
