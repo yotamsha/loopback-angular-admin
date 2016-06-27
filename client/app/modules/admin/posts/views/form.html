@@ -8,6 +8,10 @@
     <div class="panel-body">
       <div class="row">
         <div class="col-md-4">
+<!--
+          <ui-codemirror ui-codemirror-opts="ctrl.editorOptions" ng-model="ctrl.post.content"></ui-codemirror>
+-->
+          <textarea ui-tinymce="ctrl.tinymceOptions" ng-model="ctrl.post.content"></textarea>
           <formly-form model="ctrl.post" fields="ctrl.formFields" options="ctrl.formOptions"></formly-form>
         </div>
       </div>

@@ -39,6 +39,7 @@
       'angular-underscore/filters',
       'schemaForm',
       'ui.select',
+      'ui.tinymce',
       'com.module.core',
       'com.module.about',
       'com.module.browser',

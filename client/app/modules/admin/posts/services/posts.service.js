@@ -89,14 +89,14 @@
               label: gettextCatalog.getString('Committee Meeting Date')
             }
           },
-          {
+/*          {
             key: 'content',
             type: 'textarea',
             templateOptions: {
               label: gettextCatalog.getString('Content'),
               required: true
             }
-          },
+          },*/
           {
             key: 'mainImage',
             type: 'input',
@@ -120,10 +120,26 @@
           },
           {
             key: 'status',
-            type: 'input',
+            type: 'select',
             templateOptions: {
-              label: gettextCatalog.getString('Status')
-            }
+              label: gettextCatalog.getString('Status'),
+              options : [
+                {
+                  'name': 'Draft',
+                  'value': 'DRAFT'
+                },
+                {
+                  'name': 'Pending Review',
+                  'value':'PENDING_REVIEW'
+                },
+                {
+                  'name': 'Published',
+                  'value':'PUBLISHED'
+                },
+              ]
+            },
+            hideExpression: '!model.status'
+
           },
 
 

@@ -33,6 +33,12 @@
             this.post = post;
             this.formFields = PostsService.getFormFields();
             this.formOptions = {};
+            this.editorOptions = {
+              theme: 'monokai',
+              lineWrapping: true,
+              lineNumbers: true,
+              mode: 'markdown'
+            };
             this.submit = function () {
               PostsService.upsertPost(this.post).then(function () {
                 $state.go('^.list');
@@ -54,6 +60,10 @@
             this.post = post;
             this.formFields = PostsService.getFormFields();
             this.formOptions = {};
+            this.tinymceOptions = {
+              plugins: 'link image code',
+              toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
+            };
             this.submit = function () {
               PostsService.upsertPost(this.post).then(function () {
                 $state.go('^.list');
