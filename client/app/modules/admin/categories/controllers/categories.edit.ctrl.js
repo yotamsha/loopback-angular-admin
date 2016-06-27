@@ -4,16 +4,16 @@
 (function () {
   'use strict';
   angular
-    .module('com.module.mks')
-    .controller('editMKCtrl', function ($state, MKsService, mk ) {
-      this.mk = mk;
+    .module('com.module.categories')
+    .controller('editCategoryCtrl', function ($state, CategoriesService, category ) {
+      this.category = category;
 
-      this.formFields = MKsService.getFormFields();
+      this.formFields = CategoriesService.getFormFields();
       this.formOptions = {};
 
       this.submit = function () {
         // TODO bulk update committee members,categories and committees.
-        MKsService.upsertMK(this.mk).then(function () {
+        CategoriesService.upsertCategory(this.category).then(function () {
           $state.go('^.list');
         });
       };
