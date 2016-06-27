@@ -3,7 +3,7 @@
   angular
     .module('com.module.events')
     .run(function ($rootScope, Event, gettextCatalog) {
-      $rootScope.addMenu(gettextCatalog.getString('Events'), 'app.admin.events.list', 'fa-calendar-o');
+      //$rootScope.addMenu(gettextCatalog.getString('Events'), 'app.admin.events.list', 'fa-calendar-o');
 
       Event.find(function (data) {
         $rootScope.addDashboardBox('Events', 'bg-purple', 'ion-calendar', data.length, 'app.admin.events.list');
