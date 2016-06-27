@@ -6,6 +6,7 @@
       this.getPosts = function () {
         return Post.find({
           filter: {
+            include: ['categories'],
             order: 'createdAt DESC'
           }
         }).$promise;
@@ -13,11 +14,16 @@
 
       this.getPost = function (id) {
         return Post.findById({
-          id: id
-        }).$promise;
+            id: id,
+            filter : {
+              include: ['categories']
+            }
+          }
+        ).$promise;
       };
 
       this.upsertPost = function (post) {
+        //return Post.categories.link({ id: post.id, fk: '2' }).$promise;
         return Post.upsert(post).$promise
           .then(function () {
             CoreService.toastSuccess(
@@ -26,12 +32,12 @@
             );
           })
           .catch(function (err) {
-            CoreService.toastSuccess(
-              gettextCatalog.getString('Error saving post '),
-              gettextCatalog.getString('This post could no be saved: ') + err
-            );
-          }
-        );
+              CoreService.toastSuccess(
+                gettextCatalog.getString('Error saving post '),
+                gettextCatalog.getString('This post could no be saved: ') + err
+              );
+            }
+          );
       };
 
       this.deletePost = function (id, successCb, cancelCb) {
@@ -89,14 +95,14 @@
               label: gettextCatalog.getString('Committee Meeting Date')
             }
           },
-/*          {
-            key: 'content',
-            type: 'textarea',
-            templateOptions: {
-              label: gettextCatalog.getString('Content'),
-              required: true
-            }
-          },*/
+          /*          {
+           key: 'content',
+           type: 'textarea',
+           templateOptions: {
+           label: gettextCatalog.getString('Content'),
+           required: true
+           }
+           },*/
           {
             key: 'mainImage',
             type: 'input',
@@ -123,18 +129,18 @@
             type: 'select',
             templateOptions: {
               label: gettextCatalog.getString('Status'),
-              options : [
+              options: [
                 {
                   'name': 'Draft',
                   'value': 'DRAFT'
                 },
                 {
                   'name': 'Pending Review',
-                  'value':'PENDING_REVIEW'
+                  'value': 'PENDING_REVIEW'
                 },
                 {
                   'name': 'Published',
-                  'value':'PUBLISHED'
+                  'value': 'PUBLISHED'
                 },
               ]
             },

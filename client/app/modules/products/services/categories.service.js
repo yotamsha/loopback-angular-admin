@@ -7,10 +7,7 @@
       this.getCategories = function () {
         return Category.find({
           filter: {
-            order: 'created DESC',
-            include: [
-              'products'
-            ]
+            order: 'name ASC',
           }
         }).$promise;
       };

@@ -4,8 +4,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
-#: client/app/modules/about/controllers/about.config.js:6
-#: client/app/modules/about/views/main.html:2
+#: client/app/modules/admin/about/controllers/about.config.js:6
 msgid "About"
 msgstr ""
 
@@ -21,16 +20,8 @@ msgstr ""
 msgid "Add a new event"
 msgstr ""
 
-#: client/app/modules/notes/views/form.html:5
-msgid "Add a new note"
-msgstr ""
-
 #: client/app/modules/pages/views/form.html:5
 msgid "Add a new page"
-msgstr ""
-
-#: client/app/modules/posts/views/form.html:5
-msgid "Add a new post"
 msgstr ""
 
 #: client/app/modules/products/views/form.html:5
@@ -45,38 +36,24 @@ msgstr ""
 msgid "Add a new user"
 msgstr ""
 
-#: client/app/modules/about/views/main.html:3
-msgid "All about this application!"
-msgstr ""
-
+#: client/app/modules/admin/posts/services/posts.service.js:44
 #: client/app/modules/core/helpers/FormHelper.js:23
 #: client/app/modules/core/services/meta.service.js:97
 #: client/app/modules/events/services/events.service.js:36
 #: client/app/modules/files/services/file.service.js:15
-#: client/app/modules/notes/services/notes.service.js:36
 #: client/app/modules/pages/services/page.service.js:36
-#: client/app/modules/posts/services/posts.service.js:39
-#: client/app/modules/products/services/categories.service.js:45
+#: client/app/modules/products/services/categories.service.js:42
 #: client/app/modules/products/services/products.service.js:40
 #: client/app/modules/settings/services/setting.service.js:36
 #: client/app/modules/users/services/user.service.js:36
 msgid "Are you sure?"
 msgstr ""
 
-#: client/app/modules/notes/services/notes.service.js:71
-msgid "Body"
-msgstr ""
-
 #: client/app/modules/files/views/upload.html:9
 msgid "Browse"
 msgstr ""
 
-#: client/app/modules/browser/views/main.html:3
-msgid "Browse your data here!"
-msgstr ""
-
-#: client/app/modules/browser/config/browser.config.js:6
-#: client/app/modules/browser/views/main.html:2
+#: client/app/modules/admin/browser/config/browser.config.js:6
 msgid "Browser"
 msgstr ""
 
@@ -92,11 +69,11 @@ msgstr ""
 msgid "Category"
 msgstr ""
 
-#: client/app/modules/products/services/categories.service.js:50
+#: client/app/modules/products/services/categories.service.js:47
 msgid "Category deleted"
 msgstr ""
 
-#: client/app/modules/products/services/categories.service.js:30
+#: client/app/modules/products/services/categories.service.js:27
 msgid "Category saved"
 msgstr ""
 
@@ -112,16 +89,8 @@ msgstr ""
 msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a file!"
 msgstr ""
 
-#: client/app/modules/notes/views/list.html:32
-msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a note!"
-msgstr ""
-
 #: client/app/modules/pages/views/list.html:31
 msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a page!"
-msgstr ""
-
-#: client/app/modules/posts/views/list.html:51
-msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a post!"
 msgstr ""
 
 #: client/app/modules/settings/views/list.html:31
@@ -136,16 +105,12 @@ msgstr ""
 msgid "Click <a href=\"\" ui-sref=\"^.addcategory()\">here</a> to add one!"
 msgstr ""
 
+#: client/app/modules/admin/posts/services/posts.service.js:94
+msgid "Committee Meeting Date"
+msgstr ""
+
 #: client/app/modules/users/controllers/register.ctrl.js:79
 msgid "Confirm Password"
-msgstr ""
-
-#: client/app/modules/posts/services/posts.service.js:74
-msgid "Content"
-msgstr ""
-
-#: client/app/modules/notes/views/form.html:11
-msgid "Could not add note!"
 msgstr ""
 
 #: client/app/modules/users/views/form.html:11
@@ -156,23 +121,22 @@ msgstr ""
 msgid "Create pages with rich content!"
 msgstr ""
 
-#: client/app/modules/core/views/home.html:25
+#: client/app/modules/core/views/admin/home.html:25
 msgid "Current user"
 msgstr ""
 
 #: client/app/modules/core/config/core.config.js:26
-#: client/app/modules/core/views/home.html:13
+#: client/app/modules/core/views/admin/home.html:13
 msgid "Dashboard"
 msgstr ""
 
+#: client/app/modules/admin/posts/services/posts.service.js:45
 #: client/app/modules/core/helpers/FormHelper.js:24
 #: client/app/modules/core/services/meta.service.js:98
 #: client/app/modules/events/services/events.service.js:37
 #: client/app/modules/files/services/file.service.js:16
-#: client/app/modules/notes/services/notes.service.js:37
 #: client/app/modules/pages/services/page.service.js:37
-#: client/app/modules/posts/services/posts.service.js:40
-#: client/app/modules/products/services/categories.service.js:46
+#: client/app/modules/products/services/categories.service.js:43
 #: client/app/modules/products/services/products.service.js:41
 #: client/app/modules/settings/services/setting.service.js:37
 #: client/app/modules/users/services/user.service.js:37
@@ -196,16 +160,8 @@ msgstr ""
 msgid "Edit event"
 msgstr ""
 
-#: client/app/modules/notes/views/form.html:6
-msgid "Edit note"
-msgstr ""
-
 #: client/app/modules/pages/views/form.html:6
 msgid "Edit page"
-msgstr ""
-
-#: client/app/modules/posts/views/form.html:6
-msgid "Edit post"
 msgstr ""
 
 #: client/app/modules/products/views/form.html:6
@@ -239,7 +195,7 @@ msgstr ""
 msgid "End Time"
 msgstr ""
 
-#: client/app/modules/products/services/categories.service.js:55
+#: client/app/modules/products/services/categories.service.js:52
 msgid "Error deleting category"
 msgstr ""
 
@@ -259,15 +215,11 @@ msgstr ""
 msgid "Error deleting item:"
 msgstr ""
 
-#: client/app/modules/notes/services/notes.service.js:46
-msgid "Error deleting note"
-msgstr ""
-
 #: client/app/modules/pages/services/page.service.js:46
 msgid "Error deleting page"
 msgstr ""
 
-#: client/app/modules/posts/services/posts.service.js:49
+#: client/app/modules/admin/posts/services/posts.service.js:54
 msgid "Error deleting post"
 msgstr ""
 
@@ -287,7 +239,7 @@ msgstr ""
 msgid "Error registering!"
 msgstr ""
 
-#: client/app/modules/products/services/categories.service.js:36
+#: client/app/modules/products/services/categories.service.js:33
 msgid "Error saving category"
 msgstr ""
 
@@ -299,15 +251,11 @@ msgstr ""
 msgid "Error saving item"
 msgstr ""
 
-#: client/app/modules/notes/services/notes.service.js:27
-msgid "Error saving note"
-msgstr ""
-
 #: client/app/modules/pages/services/page.service.js:27
 msgid "Error saving page"
 msgstr ""
 
-#: client/app/modules/posts/services/posts.service.js:30
+#: client/app/modules/admin/posts/services/posts.service.js:35
 msgid "Error saving post"
 msgstr ""
 
@@ -340,6 +288,14 @@ msgstr ""
 msgid "Events"
 msgstr ""
 
+#: client/app/modules/admin/posts/services/posts.service.js:123
+msgid "Facebook Image"
+msgstr ""
+
+#: client/app/modules/admin/posts/services/posts.service.js:116
+msgid "Featured Image"
+msgstr ""
+
 #: client/app/modules/files/services/file.service.js:22
 msgid "File deleted"
 msgstr ""
@@ -358,16 +314,12 @@ msgstr ""
 msgid "First Name"
 msgstr ""
 
-#: client/app/modules/core/views/app.html:16
+#: client/app/modules/core/views/admin.html:12
 msgid "Hello,"
 msgstr ""
 
-#: client/app/modules/core/views/home.html:5
+#: client/app/modules/core/views/admin/home.html:5
 msgid "Home"
-msgstr ""
-
-#: client/app/modules/posts/services/posts.service.js:82
-msgid "Image"
 msgstr ""
 
 #: client/app/modules/files/views/upload.html:60
@@ -403,20 +355,16 @@ msgstr ""
 msgid "Logged out"
 msgstr ""
 
+#: client/app/modules/admin/posts/services/posts.service.js:109
+msgid "Main Image"
+msgstr ""
+
 #: client/app/modules/events/views/main.html:3
 msgid "Manage your events here!"
 msgstr ""
 
 #: client/app/modules/files/views/main.html:3
 msgid "Manage your files here!"
-msgstr ""
-
-#: client/app/modules/notes/views/main.html:3
-msgid "Manage your notes here!"
-msgstr ""
-
-#: client/app/modules/posts/views/main.html:3
-msgid "Manage your posts here!"
 msgstr ""
 
 #: client/app/modules/products/views/main.html:3
@@ -438,7 +386,7 @@ msgstr ""
 #: client/app/modules/events/services/events.service.js:63
 #: client/app/modules/files/views/upload.html:17
 #: client/app/modules/pages/services/page.service.js:64
-#: client/app/modules/products/services/categories.service.js:72
+#: client/app/modules/products/services/categories.service.js:69
 #: client/app/modules/products/services/products.service.js:73
 msgid "Name"
 msgstr ""
@@ -451,20 +399,6 @@ msgstr ""
 #: client/app/modules/users/controllers/login.ctrl.js:41
 #: client/app/modules/users/controllers/register.ctrl.js:63
 msgid "Nice email address!"
-msgstr ""
-
-#: client/app/modules/notes/services/notes.service.js:41
-msgid "Note deleted"
-msgstr ""
-
-#: client/app/modules/notes/services/notes.service.js:21
-msgid "Note saved"
-msgstr ""
-
-#: client/app/modules/notes/config/notes.config.js:6
-#: client/app/modules/notes/config/notes.config.js:9
-#: client/app/modules/notes/views/main.html:2
-msgid "Notes"
 msgstr ""
 
 #: client/app/modules/core/helpers/FormHelper.js:32
@@ -499,17 +433,20 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: client/app/modules/posts/services/posts.service.js:44
+#: client/app/modules/admin/posts/services/posts.service.js:87
+msgid "Permalink"
+msgstr ""
+
+#: client/app/modules/admin/posts/services/posts.service.js:49
 msgid "Post deleted"
 msgstr ""
 
-#: client/app/modules/posts/services/posts.service.js:24
+#: client/app/modules/admin/posts/services/posts.service.js:29
 msgid "Post saved"
 msgstr ""
 
-#: client/app/modules/posts/config/posts.config.js:6
-#: client/app/modules/posts/config/posts.config.js:9
-#: client/app/modules/posts/views/main.html:2
+#: client/app/modules/admin/posts/config/posts.config.js:6
+#: client/app/modules/admin/posts/config/posts.config.js:9
 msgid "Posts"
 msgstr ""
 
@@ -567,7 +504,7 @@ msgstr ""
 msgid "Setting saved"
 msgstr ""
 
-#: client/app/modules/core/views/home.html:29
+#: client/app/modules/core/views/admin/home.html:29
 #: client/app/modules/settings/config/settings.config.js:6
 #: client/app/modules/settings/views/main.html:2
 msgid "Settings"
@@ -601,6 +538,7 @@ msgstr ""
 msgid "Start Time"
 msgstr ""
 
+#: client/app/modules/admin/posts/services/posts.service.js:130
 #: client/app/modules/files/views/upload.html:20
 msgid "Status"
 msgstr ""
@@ -609,8 +547,12 @@ msgstr ""
 msgid "Stay signed in"
 msgstr ""
 
-#: client/app/modules/core/views/home.html:34
-#: client/app/modules/core/views/home.html:37
+#: client/app/modules/admin/posts/services/posts.service.js:79
+msgid "Subtitle"
+msgstr ""
+
+#: client/app/modules/core/views/admin/home.html:34
+#: client/app/modules/core/views/admin/home.html:37
 msgid "Theme"
 msgstr ""
 
@@ -626,16 +568,8 @@ msgstr ""
 msgid "There are no files"
 msgstr ""
 
-#: client/app/modules/notes/views/list.html:28
-msgid "There are no notes"
-msgstr ""
-
 #: client/app/modules/pages/views/list.html:27
 msgid "There are no pages"
-msgstr ""
-
-#: client/app/modules/posts/views/list.html:47
-msgid "There are no posts"
 msgstr ""
 
 #: client/app/modules/products/views/list.html:46
@@ -646,7 +580,7 @@ msgstr ""
 msgid "There are no settings"
 msgstr ""
 
-#: client/app/modules/products/services/categories.service.js:37
+#: client/app/modules/products/services/categories.service.js:34
 msgid "This category could no be saved:"
 msgstr ""
 
@@ -658,15 +592,11 @@ msgstr ""
 msgid "This item could no be saved:"
 msgstr ""
 
-#: client/app/modules/notes/services/notes.service.js:28
-msgid "This note could no be saved:"
-msgstr ""
-
 #: client/app/modules/pages/services/page.service.js:28
 msgid "This page could no be saved:"
 msgstr ""
 
-#: client/app/modules/posts/services/posts.service.js:31
+#: client/app/modules/admin/posts/services/posts.service.js:36
 msgid "This post could no be saved:"
 msgstr ""
 
@@ -682,8 +612,7 @@ msgstr ""
 msgid "This user could no be saved:"
 msgstr ""
 
-#: client/app/modules/notes/services/notes.service.js:63
-#: client/app/modules/posts/services/posts.service.js:66
+#: client/app/modules/admin/posts/services/posts.service.js:71
 msgid "Title"
 msgstr ""
 
@@ -724,11 +653,11 @@ msgstr ""
 msgid "Value"
 msgstr ""
 
-#: client/app/modules/core/views/home.html:22
+#: client/app/modules/core/views/admin/home.html:22
 msgid "Variables"
 msgstr ""
 
-#: client/app/modules/core/views/home.html:6
+#: client/app/modules/core/views/admin/home.html:6
 msgid "Welcome!"
 msgstr ""
 
@@ -753,15 +682,15 @@ msgstr ""
 msgid "You need an email address"
 msgstr ""
 
-#: client/app/modules/products/services/categories.service.js:51
+#: client/app/modules/products/services/categories.service.js:48
 msgid "Your category is deleted!"
 msgstr ""
 
-#: client/app/modules/products/services/categories.service.js:56
+#: client/app/modules/products/services/categories.service.js:53
 msgid "Your category is not deleted!"
 msgstr ""
 
-#: client/app/modules/products/services/categories.service.js:31
+#: client/app/modules/products/services/categories.service.js:28
 msgid "Your category is safe with us!"
 msgstr ""
 
@@ -805,18 +734,6 @@ msgstr ""
 msgid "Your item is safe with us!"
 msgstr ""
 
-#: client/app/modules/notes/services/notes.service.js:42
-msgid "Your note is deleted!"
-msgstr ""
-
-#: client/app/modules/notes/services/notes.service.js:47
-msgid "Your note is not deleted!"
-msgstr ""
-
-#: client/app/modules/notes/services/notes.service.js:22
-msgid "Your note is safe with us!"
-msgstr ""
-
 #: client/app/modules/pages/services/page.service.js:42
 msgid "Your page is deleted!"
 msgstr ""
@@ -833,15 +750,15 @@ msgstr ""
 msgid "Your passwords need to match"
 msgstr ""
 
-#: client/app/modules/posts/services/posts.service.js:45
+#: client/app/modules/admin/posts/services/posts.service.js:50
 msgid "Your post is deleted!"
 msgstr ""
 
-#: client/app/modules/posts/services/posts.service.js:50
+#: client/app/modules/admin/posts/services/posts.service.js:55
 msgid "Your post is not deleted!"
 msgstr ""
 
-#: client/app/modules/posts/services/posts.service.js:25
+#: client/app/modules/admin/posts/services/posts.service.js:30
 msgid "Your post is safe with us!"
 msgstr ""
 

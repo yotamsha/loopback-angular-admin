@@ -686,6 +686,16 @@ module.exports = function (grunt) {
     'build'
   ]);
 
+  grunt.registerTask('dev', [
+    'includeSource:server',
+    'ngconstant:development',
+    'loopback_sdk_angular:development',
+    'wiredep:server',
+    'autoprefixer',
+    'connect:livereload',
+    'watch'
+  ]);
+  
   grunt.registerTask('loopback', [
     'ngconstant:development',
     'loopback_sdk_angular:development',

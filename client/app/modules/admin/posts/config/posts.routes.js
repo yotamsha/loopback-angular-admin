@@ -29,51 +29,34 @@
           url: '/add',
           templateUrl: 'modules/admin/posts/views/form.html',
           controllerAs: 'ctrl',
-          controller: function ($state, PostsService, post) {
-            this.post = post;
-            this.formFields = PostsService.getFormFields();
-            this.formOptions = {};
-            this.editorOptions = {
-              theme: 'monokai',
-              lineWrapping: true,
-              lineNumbers: true,
-              mode: 'markdown'
-            };
-            this.submit = function () {
-              PostsService.upsertPost(this.post).then(function () {
-                $state.go('^.list');
-              });
-            };
-          },
+          controller: 'addPostCtrl',
           resolve: {
             post: function () {
               return {};
-            }
+            },
+            categories: function (CategoriesService) {
+              return CategoriesService.getCategories();
+            },
           }
         })
         .state('app.admin.posts.edit', {
           url: '/:id/edit',
           templateUrl: 'modules/admin/posts/views/form.html',
           controllerAs: 'ctrl',
-          controller: function ($state, PostsService, post) {
-            console.log(post);
-            this.post = post;
-            this.formFields = PostsService.getFormFields();
-            this.formOptions = {};
-            this.tinymceOptions = {
-              plugins: 'link image code',
-              toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
-            };
-            this.submit = function () {
-              PostsService.upsertPost(this.post).then(function () {
-                $state.go('^.list');
-              });
-            };
-          },
+          controller: 'editPostCtrl',
           resolve: {
             post: function ($stateParams, PostsService) {
               return PostsService.getPost($stateParams.id);
-            }
+            },
+            categories: function (CategoriesService) {
+              return CategoriesService.getCategories();
+            },
+            committees: function (CommitteesService) {
+              return CommitteesService.getCommittees();
+            },
+            mks: function (MKsService) {
+              return MKsService.getMKs();
+            },
           }
         })
         .state('app.admin.posts.view', {
