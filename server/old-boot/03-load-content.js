@@ -11,7 +11,7 @@ module.exports = function (app) {
   log('Creating categories and products');
 
   var Category = app.models.Category;
-  var Product = app.models.Product;
+  var Post = app.models.Post;
 
   Category.findOrCreate(
     {where: {name: 'Beer'}}, // find
@@ -22,37 +22,16 @@ module.exports = function (app) {
       }
       (created) ? log('created Category', category.name)
         : log('found Category', category.name);
-      Product.findOrCreate(
-        {where: {name: 'Draft beer'}}, // find
-        {
-          name: 'Draft beer',
-          price: '250',
-          categoryId: category.id
-        }, // create
-        function (err, data, created) {
-          if (err) {
-            console.error('err', err);
-          }
-          (created) ? log('created Product', data.name)
-            : log('found Product', data.name);
-        });
-      Product.findOrCreate(
-        {where: {name: 'Bottled beer'}}, // find
-        {
-          name: 'Bottled beer',
-          price: '350',
-          categoryId: category.id
-        }, //create
-        function (err, data, created) {
-          if (err) {
-            console.error('err', err);
-          }
-          (created) ? log('created Product', data.name)
-            : log('found Product', data.name);
-        });
     });
+  var post = {title : 'Post title',content: 'Content1'};
 
-  Category.findOrCreate({where: {name: 'Wine'}}, {
+  Post.findOrCreate(null,post,
+    function (err) {
+      if (err) {
+        console.error('err', err);
+      }
+    });
+/*  Category.findOrCreate({where: {name: 'Wine'}}, {
     name: 'Wine'
   }, function (err, category, created) {
     if (err) {
@@ -82,6 +61,6 @@ module.exports = function (app) {
       (created) ? log('created Product', data.name)
         : log('found Product', data.name);
     });
-  });
+  });*/
 
 };

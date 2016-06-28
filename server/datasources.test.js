@@ -1,0 +1,7 @@
+module.exports = {
+  db: {
+    name: 'db',
+    connector: 'memory',
+    file: "test_data.json"
+  }
+};

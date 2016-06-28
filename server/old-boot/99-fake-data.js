@@ -5,7 +5,7 @@ var faker = require('faker');
 var Promise = require('bluebird');
 
 module.exports = function (app) {
-  if (app.dataSources.db.name !== 'Memory' && !process.env.INITDB) {
+/*  if (app.dataSources.db.name !== 'Memory' && !process.env.INITDB) {
     return;
   }
 
@@ -13,13 +13,7 @@ module.exports = function (app) {
 
   var structure = {
     Post: {
-      count: 15
-    },
-    Event: {
-      count: 15
-    },
-    Page: {
-      count: 15
+      count: 10
     }
   };
 
@@ -42,6 +36,6 @@ module.exports = function (app) {
 
   Promise.all(promises).then(function () {
     log('Creating fake data done!');
-  }).catch();
+  }).catch();*/
 
 };
