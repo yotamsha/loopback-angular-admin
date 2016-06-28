@@ -18,6 +18,7 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
+
       'app/bower_components/jquery/dist/jquery.js',
       'app/bower_components/angular/angular.js',
       'app/bower_components/bootstrap/dist/js/bootstrap.js',
@@ -28,7 +29,8 @@ module.exports = function (config) {
       'app/bower_components/angular-animate/angular-animate.js',
       'app/bower_components/angular-touch/angular-touch.js',
       'app/bower_components/angular-ui-router/release/angular-ui-router.js',
-      'app/bower_components/angular-formly/dist/formly.min.js',
+      'app/bower_components/api-check/dist/api-check.js',
+      'app/bower_components/angular-formly/dist/formly.js',
       'app/bower_components/angular-toasty/js/ng-toasty.js',
       'app/bower_components/angular-file-upload/angular-file-upload.js',
       'app/bower_components/angular-filter/dist/angular-filter.js',
@@ -81,6 +83,7 @@ module.exports = function (config) {
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
+      'karma-chrome-launcher',
       'karma-jasmine',
       'karma-coverage'
     ],
@@ -109,7 +112,7 @@ module.exports = function (config) {
 
     // level of logging
     // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-    logLevel: config.LOG_INFO
+    logLevel: config.LOG_DEBUG
 
     // Uncomment the following lines if you are using grunt's server to run the tests
     // proxies: {

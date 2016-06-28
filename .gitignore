@@ -7,6 +7,8 @@ docular_generated
 client/app/js/lb-services.js
 client/app/js/config.js
 client/app/index.html
+log/out.log
+log/err.log
 .idea/
 storage/
 .strong-pm
