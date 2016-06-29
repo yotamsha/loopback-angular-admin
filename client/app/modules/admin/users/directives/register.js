@@ -10,7 +10,7 @@
     .module('com.module.users')
     .directive('register', function () {
       return {
-        templateUrl: 'modules/users/views/register.html',
+        templateUrl: 'modules/admin/users/views/register.html',
         restrict: 'E'
       };
     });

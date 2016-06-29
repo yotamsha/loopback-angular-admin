@@ -9,7 +9,7 @@
    **/
   angular
     .module('com.module.core')
-    .controller('PublicHomeCtrl', function ($document) {
+    .controller('PublicBaseCtrl', function ($document) {
 
       $document.find('body').css('direction','rtl');
     });

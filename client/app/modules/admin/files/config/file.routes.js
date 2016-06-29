@@ -7,11 +7,11 @@
         .state('app.admin.files', {
           abstract: true,
           url: '/files',
-          templateUrl: 'modules/files/views/main.html'
+          templateUrl: 'modules/admin/files/views/main.html'
         })
         .state('app.admin.files.list', {
           url: '',
-          templateUrl: 'modules/files/views/list.html',
+          templateUrl: 'modules/admin/files/views/list.html',
           controllerAs: 'ctrl',
           controller: function (files) {
             this.files = files.data;
@@ -24,7 +24,7 @@
         })
         .state('app.admin.files.upload', {
           url: '/upload',
-          templateUrl: 'modules/files/views/upload.html',
+          templateUrl: 'modules/admin/files/views/upload.html',
           controllerAs: 'ctrl',
           controller: function (FileUploader, CoreService) {
             this.uploader = new FileUploader({

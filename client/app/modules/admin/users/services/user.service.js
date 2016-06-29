@@ -23,14 +23,30 @@
             );
           })
           .catch(function (err) {
-            CoreService.toastError(
-              gettextCatalog.getString('Error saving user '),
-              gettextCatalog.getString('This user could no be saved: ' + err)
-            );
-          }
-        );
+              CoreService.toastError(
+                gettextCatalog.getString('Error saving user '),
+                gettextCatalog.getString('This user could no be saved: ' + err)
+              );
+            }
+          );
       };
 
+      this.update = function (user) {
+        return User.prototype$updateAttributes({id: user.id}, user).$promise
+          .then(function () {
+            CoreService.toastSuccess(
+              gettextCatalog.getString('User saved'),
+              gettextCatalog.getString('Your user is safe with us!')
+            );
+          })
+          .catch(function (err) {
+              CoreService.toastError(
+                gettextCatalog.getString('Error saving user '),
+                gettextCatalog.getString('This user could no be saved: ' + err)
+              );
+            }
+          );
+      };
       this.delete = function (id, successCb, cancelCb) {
         CoreService.confirm(
           gettextCatalog.getString('Are you sure?'),

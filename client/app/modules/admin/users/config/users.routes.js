@@ -17,11 +17,11 @@
         .state('app.admin.users', {
           abstract: true,
           url: '/users',
-          templateUrl: 'modules/users/views/main.html'
+          templateUrl: 'modules/admin/users/views/main.html'
         })
         .state('app.admin.users.list', {
           url: '',
-          templateUrl: 'modules/users/views/list.html',
+          templateUrl: 'modules/admin/users/views/list.html',
           controllerAs: 'ctrl',
           controller: function (users) {
             console.log('users', users);
@@ -36,7 +36,7 @@
         })
         .state('app.admin.users.add', {
           url: '/add',
-          templateUrl: 'modules/users/views/form.html',
+          templateUrl: 'modules/admin/users/views/form.html',
           controllerAs: 'ctrl',
           controller: function ($state, UserService, user) {
             this.user = user;
@@ -58,14 +58,14 @@
         })
         .state('app.admin.users.edit', {
           url: '/edit/:id',
-          templateUrl: 'modules/users/views/form.html',
+          templateUrl: 'modules/admin/users/views/form.html',
           controllerAs: 'ctrl',
           controller: function ($state, UserService, user) {
             this.user = user;
             this.formFields = UserService.getFormFields('edit');
             this.formOptions = {};
             this.submit = function () {
-              UserService.upsert(this.user).then(function () {
+              UserService.update(this.user).then(function () {
                 $state.go('^.list');
               });
             };
@@ -78,7 +78,7 @@
         })
         .state('app.admin.users.view', {
           url: '/view/:id',
-          templateUrl: 'modules/users/views/view.html',
+          templateUrl: 'modules/admin/users/views/view.html',
           controllerAs: 'ctrl',
           controller: function (user) {
             this.user = user;
@@ -102,14 +102,14 @@
         })
         .state('app.admin.users.profile', {
           url: '/profile',
-          templateUrl: 'modules/users/views/profile.html',
+          templateUrl: 'modules/admin/users/views/profile.html',
           controllerAs: 'ctrl',
           controller: function ($state, UserService, user) {
             this.user = user;
             this.formFields = UserService.getFormFields('edit');
             this.formOptions = {};
             this.submit = function () {
-              UserService.upsert(this.user).then(function () {
+              UserService.update(this.user).then(function () {
                 $state.go('^.profile');
               });
             };

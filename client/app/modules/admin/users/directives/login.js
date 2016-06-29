@@ -10,7 +10,7 @@
     .module('com.module.users')
     .directive('login', function () {
       return {
-        templateUrl: 'modules/users/views/login.html',
+        templateUrl: 'modules/admin/users/views/login.html',
         restrict: 'E'
       };
     });

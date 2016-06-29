@@ -7,11 +7,11 @@
         .state('app.admin.settings', {
           abstract: true,
           url: '/settings',
-          templateUrl: 'modules/settings/views/main.html'
+          templateUrl: 'modules/admin/settings/views/main.html'
         })
         .state('app.admin.settings.list', {
           url: '',
-          templateUrl: 'modules/settings/views/list.html',
+          templateUrl: 'modules/admin/settings/views/list.html',
           controllerAs: 'ctrl',
           controller: function (settings) {
             this.settings = settings;
@@ -24,7 +24,7 @@
         })
         .state('app.admin.settings.add', {
           url: '/add',
-          templateUrl: 'modules/settings/views/form.html',
+          templateUrl: 'modules/admin/settings/views/form.html',
           controllerAs: 'ctrl',
           controller: function ($state, SettingService, setting) {
             this.setting = setting;
@@ -44,7 +44,7 @@
         })
         .state('app.admin.settings.edit', {
           url: '/:id/edit',
-          templateUrl: 'modules/settings/views/form.html',
+          templateUrl: 'modules/admin/settings/views/form.html',
           controllerAs: 'ctrl',
           controller: function ($state, SettingService, setting) {
             this.setting = setting;
@@ -64,7 +64,7 @@
         })
         .state('app.admin.settings.view', {
           url: '/:id',
-          templateUrl: 'modules/settings/views/view.html',
+          templateUrl: 'modules/admin/settings/views/view.html',
           controllerAs: 'ctrl',
           controller: function (setting) {
             this.setting = setting;

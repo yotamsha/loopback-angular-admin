@@ -2,7 +2,16 @@
   "name": "user",
   "plural": "users",
   "base": "User",
-  "properties": {},
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    }
+  },
   "validations": [],
   "relations": {
     "accessTokens": {
