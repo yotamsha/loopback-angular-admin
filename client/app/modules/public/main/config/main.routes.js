@@ -7,7 +7,9 @@
         .state('app.public.main', {
           url: '',
           templateUrl: 'modules/public/main/views/main.html',
-          controller : 'MainCtrl'
+          controller : 'MainCtrl',
+          controllerAs: 'ctrl',
+
         })
     }
   );
