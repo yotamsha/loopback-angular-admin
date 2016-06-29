@@ -9,6 +9,7 @@ client/app/js/config.js
 client/app/index.html
 log/out.log
 log/err.log
+test_data_.json
 .idea/
 storage/
 .strong-pm
