@@ -22,6 +22,9 @@ module.exports = function (grunt) {
     dist: 'dist',
     api: {
       development: 'http://localhost:3000/api/',
+
+      //production: 'http://localhost:3000/api/',
+      // TODO when switching to live change to this:
       production: '/api/'
     },
     site: {
@@ -83,10 +86,11 @@ module.exports = function (grunt) {
         ]
       },
       styles: {
-        files: ['<%= yeoman.app %>/css/{,*/}*.css'],
+        files: ['<%= yeoman.app %>/css/{,*/}*.css', '<%= yeoman.app %>/css/{,*/}*.scss'],
         tasks: [
           'newer:copy:styles',
-          'autoprefixer'
+          'autoprefixer',
+          'sass:dist'
         ]
       },
       gruntfile: {
@@ -142,7 +146,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
 
     // The actual grunt server settings
     connect: {
@@ -245,6 +248,7 @@ module.exports = function (grunt) {
       }
 
     },
+
     includeSource: {
       options: {
         basePath: 'client/app',
@@ -511,6 +515,16 @@ module.exports = function (grunt) {
       ]
     },
 
+    sass: {
+      options: {
+        sourceMap: true
+      },
+      dist: {
+        files: [
+          {src: '<%= yeoman.app %>/css/app.scss', dest: '<%= yeoman.app %>/css/app.css'},
+        ],
+      }
+    },
     // Test settings
     karma: {
       unit: {
@@ -661,6 +675,7 @@ module.exports = function (grunt) {
     'loopback_sdk_angular:production',
     'includeSource:dist',
     'wiredep:dist',
+    'sass:dist',
     'useminPrepare',
     //'concurrent:dist',
     //'autoprefixer',
@@ -690,12 +705,13 @@ module.exports = function (grunt) {
     'includeSource:server',
     'ngconstant:development',
     'loopback_sdk_angular:development',
+    'sass:dist',
     'wiredep:server',
     'autoprefixer',
     'connect:livereload',
     'watch'
   ]);
-  
+
   grunt.registerTask('loopback', [
     'ngconstant:development',
     'loopback_sdk_angular:development',
