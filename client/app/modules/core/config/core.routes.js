@@ -18,19 +18,20 @@
           abstract: true,
           url: '',
           templateUrl: 'modules/core/views/app.html',
-          controller: 'MainCtrl'
+          controller: 'AppCtrl'
         })
         .state('app.public', {
           abstract: true,
-          url: '/home',
-          templateUrl: 'modules/core/views/public.html',
-        })
+          url: '/',
+          templateUrl: 'modules/core/views/public/home.html',
+          controller: 'PublicHomeCtrl'
 
-        .state('app.public.home', {
+        })
+/*        .state('app.public.main', {
           url: '',
           templateUrl: 'modules/core/views/public/home.html',
-          controller: 'HomeCtrl'
-        })
+          controller: 'PublicHomeCtrl'
+        })*/
         .state('app.admin', {
           abstract: true,
           url: '/admin',
@@ -40,7 +41,7 @@
         .state('app.admin.home', {
           url: '',
           templateUrl: 'modules/core/views/admin/home.html',
-          controller: 'HomeCtrl'
+          controller: 'AdminHomeCtrl'
         });
 
       $urlRouterProvider.otherwise('/router');

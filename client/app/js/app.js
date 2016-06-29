@@ -40,7 +40,11 @@
       'schemaForm',
       'ui.select',
       'ui.tinymce',
+      
+      //common
       'com.module.core',
+      
+      // admin
       'com.module.browser',
       'com.module.files',
       'com.module.posts',
@@ -49,7 +53,11 @@
       'com.module.committees',
       'com.module.sandbox',
       'com.module.settings',
-      'com.module.users'
+      'com.module.users',
+      
+      //public
+      'com.module.main'
+      
     ])
     .run(function ($rootScope, $cookies, gettextCatalog) {
 

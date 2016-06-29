@@ -9,9 +9,10 @@
    **/
   angular
     .module('com.module.core')
-    .controller('HomeCtrl', function ($scope, $rootScope) {
+    .controller('AdminHomeCtrl', function ($scope, $rootScope,$document) {
       $scope.count = {};
       $scope.boxes = $rootScope.dashboardBox;
+      $document.find('body').css('direction','ltr');
     });
 
 })();
