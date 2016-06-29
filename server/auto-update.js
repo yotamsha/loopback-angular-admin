@@ -9,6 +9,8 @@ var ds = app.dataSources.db;
     "ACL", "RoleMapping", "Role", "AppModel", "Page", "Post",
     "Setting", "Product", "Category", "Event", "AuthProvider", "Meta"
 ];*/
+
+// NOTE - changes to user are not updated. Should use a specific ['user'] as first argument.
 ds.autoupdate(null, function (er) {
     if (er) throw er;
     console.log('Loopback tables created in ', ds.adapter.name);
