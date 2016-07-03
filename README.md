@@ -1,15 +1,5 @@
-# Check the [develop](https://github.com/beeman/loopback-angular-admin/tree/develop) branch for the latest and greatest
 
-More info on that is happening in the develop branch can be found [here](https://github.com/beeman/loopback-angular-admin/issues/179)
-
-
-# loopback-angular-admin
-
-The goal is to have a starter project which can be used to quickly build an API with a frontend that are easily extended.
-
-**This software is not ready for production! It is still being developed and it will change in the future.**
-
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/beeman/loopback-angular-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)        [![Dependencies](https://david-dm.org/beeman/loopback-angular-admin.png)](https://david-dm.org/beeman/loopback-angular-admin)        [![Codeship Status for beeman/loopback-angular-admin](https://www.codeship.io/projects/63461bc0-396b-0132-3ad7-621226feddc2/status)](https://www.codeship.io/projects/42207)        [![Build Status](https://drone.io/github.com/beeman/loopback-angular-admin/status.png)](https://drone.io/github.com/beeman/loopback-angular-admin/latest)        [![Stories in Ready](https://badge.waffle.io/beeman/loopback-angular-admin.png?label=ready&title=Ready)](https://waffle.io/beeman/loopback-angular-admin)
+# ePart App
 
 ## Try it now!
 
@@ -53,7 +43,7 @@ Please note, at this moment there is no difference in permissions for admin user
 - User management
 - Loading indicators [chieffancypants/angular-loading-bar](https://github.com/chieffancypants/angular-loading-bar)?
 
-## TODO:
+## TODO (from original docs):
 
 - Permissions on user actions (non-admins cannot access advanced functions)
 - permissions on content items (non-admins can only edit own content, etc)
@@ -64,19 +54,7 @@ Please note, at this moment there is no difference in permissions for admin user
 - Add Vagrantfile
 
 
-[Tell me what we need more!](https://github.com/beeman/loopback-angular-admin/issues/new)
 
-## Screenshots
-#### Dashboard
-![](screenshots/dashboard.png?raw=true)
-#### Markdown Editor
-![](screenshots/pages.png?raw=true)
-#### SweetAlert
-![](screenshots/sweetalert.png?raw=true)
-#### File uploads
-![](screenshots/files.png?raw=true)
-#### Events
-![](screenshots/events.png?raw=true)
 
 ## Installation
 
@@ -139,6 +117,18 @@ To run the client you issue the command. This will also start the API.
 It will open the project in your default browser with livereload enabled.
 This will take care of reloading the page when you change your code.
 
+## Translations
+
+We are using a translations lib called [angular-gettext](https://angular-gettext.rocketeer.be/dev-guide/)
+- Download Poedit, that's the software we'll be using to translate the texts.
+- First, detect all the locations of changes by running:
+
+      grunt gettext
+      
+- Then, Open the lang.po file in Poedit, OR if file is already opened in Poedit, choose > Catalog > Update from POT file..
+- Translate your texts.
+- Run `grunt gettext` again.
+    
 ## Connect to a database
 
 You can specify the URL to the MongoDB database you want to use with the `MONGODB_URL` environment variable.
