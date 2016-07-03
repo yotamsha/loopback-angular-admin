@@ -12,6 +12,34 @@ msgstr ""
 "X-Generator: Poedit 1.8.8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: client/app/modules/admin/files/views/upload.html:21
+msgid "Actions"
+msgstr ""
+
+#: client/app/modules/admin/categories/views/form.html:5
+msgid "Add a new category"
+msgstr ""
+
+#: client/app/modules/admin/committees/views/form.html:5
+msgid "Add a new committee"
+msgstr ""
+
+#: client/app/modules/admin/mks/views/form.html:5
+msgid "Add a new mk"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:5
+msgid "Add a new post"
+msgstr ""
+
+#: client/app/modules/admin/settings/views/form.html:5
+msgid "Add a new setting"
+msgstr ""
+
+#: client/app/modules/admin/users/views/form.html:5
+msgid "Add a new user"
+msgstr ""
+
 #: client/app/modules/admin/categories/services/categories.service.js:42
 #: client/app/modules/admin/committees/services/committees.service.js:41
 #: client/app/modules/admin/files/services/file.service.js:15
@@ -24,12 +52,27 @@ msgstr ""
 msgid "Are you sure?"
 msgstr "אתה בטוח שברצונך לבצע פעולה זו?"
 
+#: client/app/modules/admin/files/views/upload.html:9
+msgid "Browse"
+msgstr ""
+
+#: client/app/modules/admin/browser/views/main.html:3
+msgid "Browse your data here!"
+msgstr ""
+
 #: client/app/modules/admin/browser/config/browser.config.js:6
+#: client/app/modules/admin/browser/views/main.html:2
 msgid "Browser"
 msgstr "דפדפן"
 
+#: client/app/modules/admin/files/views/upload.html:77
+msgid "Cancel"
+msgstr ""
+
 #: client/app/modules/admin/categories/config/categories.config.js:6
 #: client/app/modules/admin/categories/config/categories.config.js:9
+#: client/app/modules/admin/categories/views/main.html:2
+#: client/app/modules/admin/posts/views/form.html:16
 msgid "Categories"
 msgstr ""
 
@@ -39,6 +82,34 @@ msgstr ""
 
 #: client/app/modules/admin/categories/services/categories.service.js:27
 msgid "Category saved"
+msgstr ""
+
+#: client/app/modules/admin/users/views/profile.html:28
+msgid "Change it here!"
+msgstr ""
+
+#: client/app/modules/admin/categories/views/list.html:51
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a Category!"
+msgstr ""
+
+#: client/app/modules/admin/committees/views/list.html:51
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a Committee!"
+msgstr ""
+
+#: client/app/modules/admin/files/views/list.html:29
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a file!"
+msgstr ""
+
+#: client/app/modules/admin/mks/views/list.html:51
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a MK!"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/list.html:51
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a post!"
+msgstr ""
+
+#: client/app/modules/admin/settings/views/list.html:31
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a setting!"
 msgstr ""
 
 #: client/app/modules/admin/committees/services/committees.service.js:46
@@ -55,11 +126,17 @@ msgstr ""
 
 #: client/app/modules/admin/committees/config/committees.config.js:6
 #: client/app/modules/admin/committees/config/committees.config.js:9
+#: client/app/modules/admin/committees/views/main.html:2
+#: client/app/modules/admin/posts/views/form.html:24
 msgid "Committees"
 msgstr ""
 
 #: client/app/modules/admin/users/controllers/register.ctrl.js:79
 msgid "Confirm Password"
+msgstr ""
+
+#: client/app/modules/admin/users/views/form.html:11
+msgid "Could not add user!"
 msgstr ""
 
 #: client/app/modules/core/views/admin/home.html:25
@@ -85,6 +162,30 @@ msgstr ""
 
 #: client/app/modules/admin/users/controllers/register.ctrl.js:54
 msgid "Don't worry we won't spam your inbox"
+msgstr ""
+
+#: client/app/modules/admin/categories/views/form.html:6
+msgid "Edit category"
+msgstr ""
+
+#: client/app/modules/admin/committees/views/form.html:6
+msgid "Edit committee"
+msgstr ""
+
+#: client/app/modules/admin/mks/views/form.html:6
+msgid "Edit mk"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:6
+msgid "Edit post"
+msgstr ""
+
+#: client/app/modules/admin/settings/views/form.html:6
+msgid "Edit setting"
+msgstr ""
+
+#: client/app/modules/admin/users/views/form.html:6
+msgid "Edit user"
 msgstr ""
 
 #: client/app/modules/admin/mks/services/mks.service.js:85
@@ -183,6 +284,7 @@ msgstr ""
 
 #: client/app/modules/admin/files/config/file.config.js:10
 #: client/app/modules/admin/files/config/file.config.js:6
+#: client/app/modules/admin/files/views/main.html:2
 msgid "Files"
 msgstr ""
 
@@ -194,7 +296,7 @@ msgstr ""
 msgid "First Name"
 msgstr ""
 
-#: client/app/modules/public/main/controllers/main.ctrl.js:15
+#: client/app/modules/public/main/controllers/main.ctrl.js:18
 msgid "Going on Today"
 msgstr "מה קורה היום?"
 
@@ -210,6 +312,10 @@ msgstr ""
 msgid "image"
 msgstr ""
 
+#: client/app/modules/admin/files/views/upload.html:60
+msgid "in queue"
+msgstr ""
+
 #: client/app/modules/core/helpers/FormHelper.js:27
 #: client/app/modules/core/services/meta.service.js:102
 msgid "Item deleted"
@@ -221,6 +327,10 @@ msgstr ""
 
 #: client/app/modules/admin/settings/services/setting.service.js:72
 msgid "Key"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:32
+msgid "Knesset Members"
 msgstr ""
 
 #: client/app/modules/admin/users/services/user.service.js:104
@@ -243,6 +353,34 @@ msgstr ""
 msgid "Main Image"
 msgstr ""
 
+#: client/app/modules/admin/categories/views/main.html:3
+msgid "Manage your categories here!"
+msgstr ""
+
+#: client/app/modules/admin/committees/views/main.html:3
+msgid "Manage your committees here!"
+msgstr ""
+
+#: client/app/modules/admin/files/views/main.html:3
+msgid "Manage your files here!"
+msgstr ""
+
+#: client/app/modules/admin/mks/views/main.html:3
+msgid "Manage your mks here!"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/main.html:3
+msgid "Manage your posts here!"
+msgstr ""
+
+#: client/app/modules/admin/settings/views/main.html:3
+msgid "Manage your settings here!"
+msgstr ""
+
+#: client/app/modules/admin/users/views/main.html:3
+msgid "Manage your users here!"
+msgstr ""
+
 #: client/app/modules/admin/mks/services/mks.service.js:47
 msgid "MK deleted"
 msgstr ""
@@ -253,6 +391,7 @@ msgstr ""
 
 #: client/app/modules/admin/mks/config/mks.config.js:6
 #: client/app/modules/admin/mks/config/mks.config.js:9
+#: client/app/modules/admin/mks/views/main.html:2
 msgid "MKs"
 msgstr ""
 
@@ -266,6 +405,7 @@ msgstr ""
 
 #: client/app/modules/admin/categories/services/categories.service.js:69
 #: client/app/modules/admin/committees/services/committees.service.js:68
+#: client/app/modules/admin/files/views/upload.html:17
 msgid "Name"
 msgstr ""
 
@@ -283,6 +423,14 @@ msgstr ""
 msgid "Oops"
 msgstr ""
 
+#: client/app/modules/admin/users/views/login.html:17
+msgid "Or register"
+msgstr ""
+
+#: client/app/modules/admin/users/views/register.html:20
+msgid "Or sign in"
+msgstr ""
+
 #: client/app/modules/admin/users/controllers/login.ctrl.js:47
 #: client/app/modules/admin/users/controllers/register.ctrl.js:70
 #: client/app/modules/admin/users/services/user.service.js:114
@@ -293,7 +441,7 @@ msgstr ""
 msgid "Permalink"
 msgstr ""
 
-#: client/app/modules/public/main/controllers/main.ctrl.js:11
+#: client/app/modules/public/main/controllers/main.ctrl.js:13
 msgid "Popular"
 msgstr "פופולריים"
 
@@ -307,6 +455,7 @@ msgstr ""
 
 #: client/app/modules/admin/posts/config/posts.config.js:6
 #: client/app/modules/admin/posts/config/posts.config.js:9
+#: client/app/modules/admin/posts/views/main.html:2
 msgid "Posts"
 msgstr ""
 
@@ -314,8 +463,25 @@ msgstr ""
 msgid "Profile"
 msgstr ""
 
+#: client/app/modules/admin/files/views/upload.html:19
+msgid "Progress"
+msgstr ""
+
+#: client/app/modules/admin/users/views/register.html:17
+#: client/app/modules/admin/users/views/register.html:7
+msgid "Register"
+msgstr ""
+
 #: client/app/modules/admin/users/controllers/register.ctrl.js:121
 msgid "Registered"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:81
+msgid "Remove"
+msgstr ""
+
+#: client/app/modules/admin/users/views/view.html:16
+msgid "Roles"
 msgstr ""
 
 #: client/app/modules/admin/settings/services/setting.service.js:41
@@ -327,12 +493,25 @@ msgid "Setting saved"
 msgstr ""
 
 #: client/app/modules/admin/settings/config/settings.config.js:6
+#: client/app/modules/admin/settings/views/main.html:2
 #: client/app/modules/core/views/admin/home.html:29
 msgid "Settings"
 msgstr ""
 
+#: client/app/modules/admin/users/views/login.html:16
+msgid "Sign in"
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:7
+msgid "Sign In"
+msgstr ""
+
 #: client/app/modules/core/views/elements/navbar.html:43
 msgid "Sign out"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:18
+msgid "Size"
 msgstr ""
 
 #: client/app/modules/admin/categories/services/categories.service.js:77
@@ -341,6 +520,7 @@ msgstr ""
 msgid "Slug"
 msgstr ""
 
+#: client/app/modules/admin/files/views/upload.html:20
 #: client/app/modules/admin/posts/services/posts.service.js:132
 msgid "Status"
 msgstr ""
@@ -356,6 +536,30 @@ msgstr ""
 #: client/app/modules/core/views/admin/home.html:34
 #: client/app/modules/core/views/admin/home.html:37
 msgid "Theme"
+msgstr ""
+
+#: client/app/modules/admin/categories/views/list.html:47
+msgid "There are no Categories"
+msgstr ""
+
+#: client/app/modules/admin/committees/views/list.html:47
+msgid "There are no Committees"
+msgstr ""
+
+#: client/app/modules/admin/files/views/list.html:25
+msgid "There are no files"
+msgstr ""
+
+#: client/app/modules/admin/mks/views/list.html:47
+msgid "There are no MKs"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/list.html:47
+msgid "There are no posts"
+msgstr ""
+
+#: client/app/modules/admin/settings/views/list.html:27
+msgid "There are no settings"
 msgstr ""
 
 #: client/app/modules/admin/categories/services/categories.service.js:34
@@ -392,6 +596,22 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr ""
 
+#: client/app/modules/public/main/controllers/main.ctrl.js:14
+msgid "Top ranked posts"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:73
+msgid "Upload"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:5
+msgid "Upload files"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:59
+msgid "Upload queue"
+msgstr ""
+
 #: client/app/modules/admin/users/services/user.service.js:57
 msgid "User deleted"
 msgstr ""
@@ -406,6 +626,7 @@ msgid "Username"
 msgstr ""
 
 #: client/app/modules/admin/users/config/users.config.js:5
+#: client/app/modules/admin/users/views/main.html:2
 msgid "Users"
 msgstr ""
 
@@ -416,6 +637,14 @@ msgstr ""
 #: client/app/modules/core/views/admin/home.html:22
 msgid "Variables"
 msgstr ""
+
+#: client/app/modules/common/content-feed/views/content-feed.html:17
+msgid "Voted against"
+msgstr "נגד"
+
+#: client/app/modules/common/content-feed/views/content-feed.html:13
+msgid "Voted for"
+msgstr "בעד"
 
 #: client/app/modules/core/views/admin/home.html:6
 msgid "Welcome!"
@@ -431,6 +660,10 @@ msgstr ""
 
 #: client/app/modules/admin/users/controllers/register.ctrl.js:122
 msgid "You are registered!"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:6
+msgid "You can just drag them in this window!"
 msgstr ""
 
 #: client/app/modules/admin/users/controllers/login.ctrl.js:39
@@ -459,6 +692,10 @@ msgstr ""
 
 #: client/app/modules/admin/files/services/file.service.js:30
 msgid "Your file is not deleted!"
+msgstr ""
+
+#: client/app/modules/admin/users/views/profile.html:24
+msgid "Your Gravatar"
 msgstr ""
 
 #: client/app/modules/core/helpers/FormHelper.js:28

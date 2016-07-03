@@ -1,4 +1,64 @@
+@import "variables";
+
 .content-feed {
+  /*
   background-color: #F8F8F8;
+  */
   min-height: 400px;
+  .feed-section-title {
+    color: $primary-color;
+    background-color: #ffffff;
+    height: 60px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-right: 10px;
+    h4 {
+      margin-bottom: 5px;
+    }
+  }
+  .feed-post-item {
+    height: 140px;
+    background-color: #ffffff;
+    .content-display {
+      height: 100%;
+      padding-right: 170px;
+      h3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .user-engagement-bar {
+        height: 40px;
+        margin-top: 10px;
+        position: absolute;
+        bottom: 10px;
+        left: 0px;
+        right: 170px;
+
+        .votes-box {
+          height: 25px;
+          width: 70px;
+          position: absolute;
+          right: 0px;
+          top: 8px;
+          color: #ffffff;
+          text-align: center;
+          padding-top: 2px;
+          &.upvotes {
+            background-color: green;
+            right: 0px;
+          }
+          &.downvotes {
+            background-color: red;
+            right: 80px;
+          }
+        }
+
+      }
+    }
+    .img-container {
+      height: 100%;
+      width: 150px;
+    }
+  }
 }

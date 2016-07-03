@@ -1,12 +1,26 @@
 <div class="container-fluid">
-  feeeeeed
   <div class="feed-items-container" ng-repeat="postsSection in feedPosts">
-    <h3>{{postsSection.title}}</h3>
-    <h3>{{'Popular' | translate}}</h3>
+    <div class="feed-section-title">
+      <h4>{{postsSection.title}}</h4>
+      <h6>{{postsSection.subtitle}}</h6>
+    </div>
     <div class="feed-post-item" ng-repeat="post in postsSection.posts">
-      <h3>{{post.title}}</h3>
-      <h4>{{post.subtitle}}</h4>
-      <div ng-bind-html="post.content"></div>
+      <div class="col-xs-12 content-display">
+        <h3>{{post.title}}</h3>
+        <h6>{{post.subtitle}}</h6>
+        <div class="user-engagement-bar">
+          <div class="votes-box upvotes">
+            {{ 'Voted for' | translate }} {{post.upVotes}}5%
+
+          </div>
+          <div class="votes-box downvotes">
+            {{ 'Voted against' | translate }}  {{post.downVotes}}10%
+
+          </div>
+        </div>
+      </div>
+      <div class="img-container" back-img="{{post.featuredImage}}">
+      </div>
     </div>
   </div>
 </div>

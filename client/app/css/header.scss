@@ -1,4 +1,6 @@
+@import "variables";
+
 .header {
-  background-color: #ffffff;
-  min-height: 100px;
+  background-color: $primary-color;
+  min-height: 50px;
 }
