@@ -2,8 +2,11 @@
   feeeeeed
   <div class="feed-items-container" ng-repeat="postsSection in feedPosts">
     <h3>{{postsSection.title}}</h3>
+    <h3>{{'Popular' | translate}}</h3>
     <div class="feed-post-item" ng-repeat="post in postsSection.posts">
-      {{post.content}}
+      <h3>{{post.title}}</h3>
+      <h4>{{post.subtitle}}</h4>
+      <div ng-bind-html="post.content"></div>
     </div>
   </div>
 </div>

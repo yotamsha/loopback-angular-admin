@@ -3,12 +3,13 @@
   angular
     .module('com.module.posts')
     .service('PostsService', function (CoreService, Post, gettextCatalog) {
-      this.getPosts = function () {
-        return Post.find({
-          filter: {
+      this.getPosts = function (filtersObj) {
+        var filters = filtersObj || {
             include: ['categories'],
-            order: 'createdAt DESC'
-          }
+            order: 'updatedAt DESC'
+          };
+        return Post.find({
+          filter: filters
         }).$promise;
       };
 

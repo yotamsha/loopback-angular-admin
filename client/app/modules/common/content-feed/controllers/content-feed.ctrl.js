@@ -5,8 +5,8 @@
   'use strict';
   angular
     .module('com.module.common')
-    .controller('contentFeedCtrl', function ($state ) {
-      
+    .controller('contentFeedCtrl', function () {
+
     });
 
 

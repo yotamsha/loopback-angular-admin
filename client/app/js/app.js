@@ -61,58 +61,29 @@
 
     ])
     .run(function ($rootScope, $cookies, gettextCatalog) {
-
+      var DEFAULT_LANGUAGE = 'he_IL';
       $rootScope.locales = {
-        'de': {
-          lang: 'de',
-          country: 'DE',
-          name: gettextCatalog.getString('German')
-        },
         'en': {
           lang: 'en',
           country: 'US',
           name: gettextCatalog.getString('English')
         },
-        'es_MX': {
-          lang: 'es_MX',
-          country: 'MX',
-          name: gettextCatalog.getString('Spanish')
-        },
-        'fr': {
-          lang: 'fr',
-          country: 'FR',
-          name: gettextCatalog.getString('Français')
-        },
-        'nl': {
-          lang: 'nl',
-          country: 'NL',
-          name: gettextCatalog.getString('Dutch')
-        },
-        'pt-BR': {
-          lang: 'pt_BR',
-          country: 'BR',
-          name: gettextCatalog.getString('Portuguese Brazil')
-        },
-        'ru_RU': {
-          lang: 'ru_RU',
-          country: 'RU',
-          name: gettextCatalog.getString('Russian')
-        },
-        'zh_CN': {
-          lang: 'zh_CN',
-          country: 'CN',
-          name: gettextCatalog.getString('Chinese')
+        'he_IL': {
+          lang: 'he_IL',
+          country: 'IL',
+          name: gettextCatalog.getString('Hebrew')
         }
+
       };
 
-      var lang = $cookies.lang || navigator.language || navigator.userLanguage;
+      var lang = $cookies.lang || DEFAULT_LANGUAGE || navigator.language || navigator.userLanguage;
 
       $rootScope.locale = $rootScope.locales[lang];
 
       if (angular.isUndefined($rootScope.locale)) {
         $rootScope.locale = $rootScope.locales[lang];
         if (angular.isUndefined($rootScope.locale)) {
-          $rootScope.locale = $rootScope.locales['en'];
+          $rootScope.locale = $rootScope.locales[DEFAULT_LANGUAGE];
         }
       }
 

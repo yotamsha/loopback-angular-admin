@@ -1,8 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: \n"
+"X-Generator: Poedit 1.8.8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: client/app/modules/admin/categories/services/categories.service.js:42
 #: client/app/modules/admin/committees/services/committees.service.js:41
@@ -14,11 +22,11 @@ msgstr ""
 #: client/app/modules/core/helpers/FormHelper.js:23
 #: client/app/modules/core/services/meta.service.js:97
 msgid "Are you sure?"
-msgstr ""
+msgstr "אתה בטוח שברצונך לבצע פעולה זו?"
 
 #: client/app/modules/admin/browser/config/browser.config.js:6
 msgid "Browser"
-msgstr ""
+msgstr "דפדפן"
 
 #: client/app/modules/admin/categories/config/categories.config.js:6
 #: client/app/modules/admin/categories/config/categories.config.js:9
@@ -188,7 +196,7 @@ msgstr ""
 
 #: client/app/modules/public/main/controllers/main.ctrl.js:15
 msgid "Going on Today"
-msgstr ""
+msgstr "מה קורה היום?"
 
 #: client/app/modules/core/views/admin.html:18
 msgid "Hello,"
@@ -287,7 +295,7 @@ msgstr ""
 
 #: client/app/modules/public/main/controllers/main.ctrl.js:11
 msgid "Popular"
-msgstr ""
+msgstr "פופולריים"
 
 #: client/app/modules/admin/posts/services/posts.service.js:51
 msgid "Post deleted"
@@ -521,3 +529,6 @@ msgstr ""
 #: client/app/modules/admin/users/services/user.service.js:39
 msgid "Your user is safe with us!"
 msgstr ""
+
+#~ msgid "Today"
+#~ msgstr "היום"

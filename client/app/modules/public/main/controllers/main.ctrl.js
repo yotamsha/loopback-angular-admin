@@ -5,31 +5,17 @@
   'use strict';
   angular
     .module('com.module.main')
-    .controller('MainCtrl', function ($state) {
+    .controller('MainCtrl', function (todayPosts, popularPosts, gettextCatalog) {
       this.feedPosts = [
         {
-          title: "feed section title",
-          posts: [
-            {
-              content: "some post content 1"
-            },
-            {
-              content: "some post content 2"
-            }
-          ]
+          title: gettextCatalog.getString('Popular'),
+          posts: popularPosts
         },
         {
-          title: "feed section title",
-          posts: [
-            {
-              content: "some post content 3"
-            },
-            {
-              content: "some post content 4"
-            }
-          ]
+          title: gettextCatalog.getString('Going on Today'),
+          posts: todayPosts
         }
-      ]
+      ];
     });
 
 
