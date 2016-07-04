@@ -86,11 +86,12 @@ module.exports = function (grunt) {
         ]
       },
       styles: {
-        files: ['<%= yeoman.app %>/css/{,*/}*.css', '<%= yeoman.app %>/css/{,*/}*.scss'],
+        files: [ '<%= yeoman.app %>/css/{,*/}*.scss'],
         tasks: [
+          'sass:dist',
           'newer:copy:styles',
-          'autoprefixer',
-          'sass:dist'
+          'autoprefixer'
+
         ]
       },
       gruntfile: {
@@ -702,10 +703,11 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('dev', [
+    'sass:dist',
     'includeSource:server',
     'ngconstant:development',
     'loopback_sdk_angular:development',
-    'sass:dist',
+
     'wiredep:server',
     'autoprefixer',
     'connect:livereload',

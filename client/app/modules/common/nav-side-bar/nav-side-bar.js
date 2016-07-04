@@ -11,10 +11,14 @@
     .module('com.module.common')
     .directive('navSideBar', function () {
       return {
-        templateUrl: 'modules/common/nav-side-bar/views/nav-side-bar.html',
+        //templateUrl: 'modules/common/nav-side-bar/views/nav-side-bar.html',
+        templateUrl: function(elem,attrs) {
+          return attrs.templateUrl || 'modules/common/nav-side-bar/views/nav-side-bar.html'
+        },
         restrict: 'E',
         transclude: true,
         scope: {
+          
         },
       };
     });

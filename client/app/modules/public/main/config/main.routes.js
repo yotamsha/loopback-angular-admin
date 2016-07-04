@@ -14,7 +14,10 @@
                 'PostsService',
                 function (PostsService) {
                   return PostsService.getPosts({
-                    order: 'meetingDate DESC', limit: 2, where : { status : 'PUBLISHED'}
+                    order: 'meetingDate DESC',
+                    limit: 2,
+                    include : ['categories'],
+                    where : { status : 'PUBLISHED'}
                   });
                 }
               ],
@@ -22,7 +25,10 @@
                 'PostsService',
                 function (PostsService) {
                   return PostsService.getPosts({
-                    order: 'meetingDate DESC', limit: 2,  where : { status : 'PUBLISHED'}
+                    order: 'meetingDate DESC',
+                    include : ['categories'],
+                    limit: 2,
+                    where : { status : 'PUBLISHED'}
                   });
                 }
               ]
