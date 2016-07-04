@@ -5,8 +5,13 @@
       <h6>{{postsSection.subtitle}}</h6>
     </div>
     <div class="feed-post-item" ng-repeat="post in postsSection.posts">
-      <div class="col-xs-12 content-display">
-        <h3>{{post.title}}</h3>
+      <a ui-sref="^.post({permaLink: post.permaLink, id: post.id})">
+        <div class="img-container" back-img="{{post.featuredImage}}">
+          <!--<div class="categories-container"></div>-->
+        </div>
+      </a>
+      <div class="content-display">
+        <a ui-sref="^.post({permaLink: post.permaLink, id: post.id})"><h3>{{post.title}}</h3></a>
         <a ui-sref="^.post({permaLink: post.permaLink, id: post.id})"><h6>{{post.subtitle}}</h6></a>
         <div class="user-engagement-bar">
           <div class="votes-box upvotes">
@@ -17,9 +22,8 @@
           </div>
         </div>
       </div>
-      <div class="img-container" back-img="{{post.featuredImage}}">
-        <div class="categories-container"></div>
-      </div>
+
+
     </div>
   </div>
 </div>
