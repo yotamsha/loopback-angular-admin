@@ -18,6 +18,6 @@ angular.module('com.module.core')
         'background-size' : 'cover'
       });
     };
-  })
+  });
 
 })();

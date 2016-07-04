@@ -7,7 +7,7 @@
     <div class="feed-post-item" ng-repeat="post in postsSection.posts">
       <div class="col-xs-12 content-display">
         <h3>{{post.title}}</h3>
-        <h6>{{post.subtitle}}</h6>
+        <a ui-sref="^.post({permaLink: post.permaLink, id: post.id})"><h6>{{post.subtitle}}</h6></a>
         <div class="user-engagement-bar">
           <div class="votes-box upvotes">
             {{ 'Voted for' | translate }} {{post.upVotes}}5%

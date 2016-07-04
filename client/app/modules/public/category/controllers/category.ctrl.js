@@ -5,9 +5,18 @@
   'use strict';
   angular
     .module('com.module.category')
-    .controller('CategoryCtrl', function (category) {
+    .controller('CategoryCtrl', function (category, gettextCatalog) {
       this.category = category;
       this.posts = category.posts || [];
+      this.feedPosts = [
+        {
+          title: gettextCatalog.getString('Popular'),
+          subtitle: gettextCatalog.getString('Top ranked posts'),
+          posts: this.posts
+        }
+
+      ];
+
     });
 
 

@@ -14,6 +14,8 @@
         templateUrl: 'modules/common/content-feed/views/content-feed.html',
         restrict: 'E',
         transclude: true,
+        controller : 'contentFeedCtrl',
+        controllerAs : 'ctrl',
         scope: {
           feedPosts: '='
         },

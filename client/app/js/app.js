@@ -58,7 +58,8 @@
 
       //public
       'com.module.main',
-      'com.module.category'
+      'com.module.category',
+      'com.module.post'
 
     ])
     .run(function ($rootScope, $cookies, gettextCatalog) {

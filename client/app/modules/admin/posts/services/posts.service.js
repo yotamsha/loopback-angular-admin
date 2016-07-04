@@ -23,6 +23,15 @@
         ).$promise;
       };
 
+      this.getPostByParams = function (filterObj) {
+        var filter = filterObj || {};
+
+        return Post.findOne({
+            filter : filter
+          }
+        ).$promise;
+      };
+      
       this.upsertPost = function (post) {
         //return Post.categories.link({ id: post.id, fk: '2' }).$promise;
         return Post.upsert(post).$promise

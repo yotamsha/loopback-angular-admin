@@ -36,12 +36,12 @@
       ];
       this.listItems = [
         {
-          text : "home",
-          url : "/home"
+          text : 'home',
+          url : '/home'
         },
         {
-          text : "category1",
-          url : "/category/1"
+          text : 'category1',
+          url : '/category/1'
         }
       ];
     });
