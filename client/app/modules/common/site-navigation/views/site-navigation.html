@@ -1,5 +1,7 @@
 <div class="categories-list">
-  <div ng-repeat="li in ctrl.listItems">
-    <a href="#{{li.url}}">{{li.text}}</a>
+  <div ng-repeat="category in ctrl.categoriesList">
+
+    <a ui-sref="^.category({slug: category.slug, id: category.id})">{{category.text}}</a>
+
   </div>
 </div>

@@ -12,13 +12,25 @@
         }).$promise;
       };
 
-      this.getCategory = function (id) {
+      this.getCategory = function (id, filterObj) {
+        var filter = filterObj || {};
         return Category.findById({
-            id: id
+            id: id,
+            filter : filter
           }
         ).$promise;
 
       };
+      this.getCategoryByParams = function (filterObj) {
+        var filter = filterObj || {};
+
+        return Category.findOne({
+            filter : filter
+          }
+        ).$promise;
+
+      };
+
 
       this.upsertCategory = function (category) {
         return Category.upsert(category).$promise

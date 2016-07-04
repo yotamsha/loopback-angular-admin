@@ -2,7 +2,7 @@
   'use strict';
   angular
     .module('com.module.core')
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
       $stateProvider
         .state('router', {
           url: '/router',
@@ -38,7 +38,7 @@
           url: '',
           templateUrl: 'modules/core/views/admin/home.html',
         });
-
+      $locationProvider.html5Mode(true);
       $urlRouterProvider.otherwise('/router');
     });
 

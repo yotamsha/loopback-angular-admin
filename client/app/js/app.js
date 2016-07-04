@@ -58,6 +58,7 @@
 
       //public
       'com.module.main',
+      'com.module.category'
 
     ])
     .run(function ($rootScope, $cookies, gettextCatalog) {

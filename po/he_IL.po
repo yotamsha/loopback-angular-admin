@@ -598,7 +598,7 @@ msgstr ""
 
 #: client/app/modules/public/main/controllers/main.ctrl.js:14
 msgid "Top ranked posts"
-msgstr ""
+msgstr "על מה כולם מדברים?"
 
 #: client/app/modules/admin/files/views/upload.html:73
 msgid "Upload"

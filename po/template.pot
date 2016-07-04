@@ -630,7 +630,7 @@ msgstr ""
 msgid "Variables"
 msgstr ""
 
-#: client/app/modules/common/content-feed/views/content-feed.html:17
+#: client/app/modules/common/content-feed/views/content-feed.html:16
 msgid "Voted against"
 msgstr ""
 
