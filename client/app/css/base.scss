@@ -9,12 +9,17 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px;
 }
 @include media-min($layout-breakpoint-sm) {
-/*  .view-container {
-    max-width: $layout-breakpoint-sm;
-  }*/
+
   .page-content-container {
-    width: 1200px;
+    width: $desktop-max-width;
     margin: auto;
   }
 }
 
+.ep-vcenter {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

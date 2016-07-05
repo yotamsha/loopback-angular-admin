@@ -1,0 +1,40 @@
+@import "variables";
+
+#top-nav-bar {
+  background-color: $primary-color;
+  margin-bottom: 15px;
+  .nav-bar-content {
+    max-width: $desktop-max-width;
+    height: 50px;
+    margin: auto;
+    color: #ffffff;
+
+    .logo-img {
+      background-image: url('../images/epart-logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 42px;
+    }
+  }
+  .home-header-image {
+    background-color: #F1F1F1;
+    /*
+    height: 300px;
+    */
+    width: 100%;
+    background-image: url("../images/knesset-banner.jpg");
+    /*
+    background-size: contain;
+    */
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    img {
+      vertical-align: top;
+      width: 100%; /* max width */
+      visibility: hidden;
+    }
+
+  }
+
+}
