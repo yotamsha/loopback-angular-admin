@@ -5,7 +5,11 @@
   'use strict';
   angular
     .module('com.module.common')
-    .controller('siteNavigationCtrl', function () {
+    .controller('siteNavigationCtrl', function (CategoriesService, gettextCatalog, $state, $stateParams) {
+      var ctrl = this;
+      this.$state = $state;
+      this.$stateParams = $stateParams;
+
       /**
        * When a user is not logged-in:
        * - home link
@@ -21,29 +25,52 @@
        * - all categories
 
        */
-      this.categoriesList = [
+      function _init() {
+        CategoriesService.getCategories().then(function(response){
+          ctrl.categoriesList = response;
+        });
+      }
+
+/*      this.categoriesList = [
         {
-          id :1,
-          slug : 'some-slug',
-          text : 'cat1'
+          id: 1,
+          slug: 'some-slug',
+          text: 'cat1'
         },
         {
-          id :2,
-          slug : 'סלאג-עברית',
-          text : 'cat2'
+          id: 2,
+          slug: 'סלאג-עברית',
+          text: 'cat2'
 
         }
-      ];
-      this.listItems = [
+      ];*/
+      this.primaryLinks = [
         {
-          text : 'home',
-          url : '/home'
+          text: gettextCatalog.getString('Home'),
+          state: 'app.public.main'
         },
         {
-          text : 'category1',
-          url : '/category/1'
+          text: gettextCatalog.getString('Sign in'),
+          state: 'app.public.login'
         }
       ];
+      this.secondaryLinks = [
+        {
+          text: gettextCatalog.getString('About'),
+          state: 'app.public.about'
+        },
+        {
+          text: gettextCatalog.getString('Privacy'),
+          state: 'app.public.privacy'
+        }
+      ];
+
+      this.navClass = function (state) {
+        return state === $state.current.name ? 'active' : '';
+
+      };
+
+      _init();
     });
 
 

@@ -4,6 +4,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:59
+msgid "About"
+msgstr ""
+
 #: client/app/modules/admin/files/views/upload.html:21
 msgid "Actions"
 msgstr ""
@@ -32,11 +36,11 @@ msgstr ""
 msgid "Add a new user"
 msgstr ""
 
-#: client/app/modules/admin/categories/services/categories.service.js:42
+#: client/app/modules/admin/categories/services/categories.service.js:54
 #: client/app/modules/admin/committees/services/committees.service.js:41
 #: client/app/modules/admin/files/services/file.service.js:15
 #: client/app/modules/admin/mks/services/mks.service.js:42
-#: client/app/modules/admin/posts/services/posts.service.js:46
+#: client/app/modules/admin/posts/services/posts.service.js:55
 #: client/app/modules/admin/settings/services/setting.service.js:36
 #: client/app/modules/admin/users/services/user.service.js:52
 #: client/app/modules/core/helpers/FormHelper.js:23
@@ -65,14 +69,15 @@ msgstr ""
 #: client/app/modules/admin/categories/config/categories.config.js:9
 #: client/app/modules/admin/categories/views/main.html:2
 #: client/app/modules/admin/posts/views/form.html:16
+#: client/app/modules/common/site-navigation/views/site-navigation.html:13
 msgid "Categories"
 msgstr ""
 
-#: client/app/modules/admin/categories/services/categories.service.js:47
+#: client/app/modules/admin/categories/services/categories.service.js:59
 msgid "Category deleted"
 msgstr ""
 
-#: client/app/modules/admin/categories/services/categories.service.js:27
+#: client/app/modules/admin/categories/services/categories.service.js:39
 msgid "Category saved"
 msgstr ""
 
@@ -108,7 +113,7 @@ msgstr ""
 msgid "Committee deleted"
 msgstr ""
 
-#: client/app/modules/admin/posts/services/posts.service.js:96
+#: client/app/modules/admin/posts/services/posts.service.js:105
 msgid "Committee Meeting Date"
 msgstr ""
 
@@ -140,11 +145,11 @@ msgstr ""
 msgid "Dashboard"
 msgstr ""
 
-#: client/app/modules/admin/categories/services/categories.service.js:43
+#: client/app/modules/admin/categories/services/categories.service.js:55
 #: client/app/modules/admin/committees/services/committees.service.js:42
 #: client/app/modules/admin/files/services/file.service.js:16
 #: client/app/modules/admin/mks/services/mks.service.js:43
-#: client/app/modules/admin/posts/services/posts.service.js:47
+#: client/app/modules/admin/posts/services/posts.service.js:56
 #: client/app/modules/admin/settings/services/setting.service.js:37
 #: client/app/modules/admin/users/services/user.service.js:53
 #: client/app/modules/core/helpers/FormHelper.js:24
@@ -195,7 +200,7 @@ msgstr ""
 msgid "Email address needs to be valid"
 msgstr ""
 
-#: client/app/modules/admin/categories/services/categories.service.js:52
+#: client/app/modules/admin/categories/services/categories.service.js:64
 #: client/app/modules/admin/committees/services/committees.service.js:51
 msgid "Error deleting category"
 msgstr ""
@@ -216,7 +221,7 @@ msgstr ""
 msgid "Error deleting mk"
 msgstr ""
 
-#: client/app/modules/admin/posts/services/posts.service.js:56
+#: client/app/modules/admin/posts/services/posts.service.js:65
 msgid "Error deleting post"
 msgstr ""
 
@@ -232,7 +237,7 @@ msgstr ""
 msgid "Error registering!"
 msgstr ""
 
-#: client/app/modules/admin/categories/services/categories.service.js:33
+#: client/app/modules/admin/categories/services/categories.service.js:45
 #: client/app/modules/admin/committees/services/committees.service.js:32
 msgid "Error saving category"
 msgstr ""
@@ -245,7 +250,7 @@ msgstr ""
 msgid "Error saving mk"
 msgstr ""
 
-#: client/app/modules/admin/posts/services/posts.service.js:37
+#: client/app/modules/admin/posts/services/posts.service.js:46
 msgid "Error saving post"
 msgstr ""
 
@@ -262,11 +267,11 @@ msgstr ""
 msgid "Error signin in after registration!"
 msgstr ""
 
-#: client/app/modules/admin/posts/services/posts.service.js:125
+#: client/app/modules/admin/posts/services/posts.service.js:134
 msgid "Facebook Image"
 msgstr ""
 
-#: client/app/modules/admin/posts/services/posts.service.js:118
+#: client/app/modules/admin/posts/services/posts.service.js:127
 msgid "Featured Image"
 msgstr ""
 
@@ -296,6 +301,8 @@ msgstr ""
 msgid "Hello,"
 msgstr ""
 
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:49
+#: client/app/modules/common/site-navigation/views/site-navigation.html:3
 #: client/app/modules/core/views/admin/home.html:5
 msgid "Home"
 msgstr ""
@@ -341,7 +348,7 @@ msgstr ""
 msgid "Logged out"
 msgstr ""
 
-#: client/app/modules/admin/posts/services/posts.service.js:111
+#: client/app/modules/admin/posts/services/posts.service.js:120
 msgid "Main Image"
 msgstr ""
 
@@ -395,7 +402,7 @@ msgstr ""
 msgid "name"
 msgstr ""
 
-#: client/app/modules/admin/categories/services/categories.service.js:69
+#: client/app/modules/admin/categories/services/categories.service.js:81
 #: client/app/modules/admin/committees/services/committees.service.js:68
 #: client/app/modules/admin/files/views/upload.html:17
 msgid "Name"
@@ -429,19 +436,20 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: client/app/modules/admin/posts/services/posts.service.js:89
+#: client/app/modules/admin/posts/services/posts.service.js:98
 msgid "Permalink"
 msgstr ""
 
+#: client/app/modules/public/category/controllers/category.ctrl.js:13
 #: client/app/modules/public/main/controllers/main.ctrl.js:13
 msgid "Popular"
 msgstr ""
 
-#: client/app/modules/admin/posts/services/posts.service.js:51
+#: client/app/modules/admin/posts/services/posts.service.js:60
 msgid "Post deleted"
 msgstr ""
 
-#: client/app/modules/admin/posts/services/posts.service.js:31
+#: client/app/modules/admin/posts/services/posts.service.js:40
 msgid "Post saved"
 msgstr ""
 
@@ -449,6 +457,10 @@ msgstr ""
 #: client/app/modules/admin/posts/config/posts.config.js:9
 #: client/app/modules/admin/posts/views/main.html:2
 msgid "Posts"
+msgstr ""
+
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:63
+msgid "Privacy"
 msgstr ""
 
 #: client/app/modules/core/views/elements/navbar.html:40
@@ -491,6 +503,7 @@ msgid "Settings"
 msgstr ""
 
 #: client/app/modules/admin/users/views/login.html:16
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:53
 msgid "Sign in"
 msgstr ""
 
@@ -506,14 +519,14 @@ msgstr ""
 msgid "Size"
 msgstr ""
 
-#: client/app/modules/admin/categories/services/categories.service.js:77
+#: client/app/modules/admin/categories/services/categories.service.js:89
 #: client/app/modules/admin/committees/services/committees.service.js:76
 #: client/app/modules/admin/mks/services/mks.service.js:77
 msgid "Slug"
 msgstr ""
 
 #: client/app/modules/admin/files/views/upload.html:20
-#: client/app/modules/admin/posts/services/posts.service.js:132
+#: client/app/modules/admin/posts/services/posts.service.js:141
 msgid "Status"
 msgstr ""
 
@@ -521,7 +534,7 @@ msgstr ""
 msgid "Stay signed in"
 msgstr ""
 
-#: client/app/modules/admin/posts/services/posts.service.js:81
+#: client/app/modules/admin/posts/services/posts.service.js:90
 msgid "Subtitle"
 msgstr ""
 
@@ -554,7 +567,7 @@ msgstr ""
 msgid "There are no settings"
 msgstr ""
 
-#: client/app/modules/admin/categories/services/categories.service.js:34
+#: client/app/modules/admin/categories/services/categories.service.js:46
 #: client/app/modules/admin/committees/services/committees.service.js:33
 msgid "This category could no be saved:"
 msgstr ""
@@ -567,7 +580,7 @@ msgstr ""
 msgid "This MK could no be saved:"
 msgstr ""
 
-#: client/app/modules/admin/posts/services/posts.service.js:38
+#: client/app/modules/admin/posts/services/posts.service.js:47
 msgid "This post could no be saved:"
 msgstr ""
 
@@ -580,7 +593,7 @@ msgstr ""
 msgid "This user could no be saved:"
 msgstr ""
 
-#: client/app/modules/admin/posts/services/posts.service.js:73
+#: client/app/modules/admin/posts/services/posts.service.js:82
 msgid "Title"
 msgstr ""
 
@@ -588,6 +601,7 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr ""
 
+#: client/app/modules/public/category/controllers/category.ctrl.js:14
 #: client/app/modules/public/main/controllers/main.ctrl.js:14
 msgid "Top ranked posts"
 msgstr ""
@@ -630,11 +644,11 @@ msgstr ""
 msgid "Variables"
 msgstr ""
 
-#: client/app/modules/common/content-feed/views/content-feed.html:16
+#: client/app/modules/common/content-feed/views/content-feed.html:21
 msgid "Voted against"
 msgstr ""
 
-#: client/app/modules/common/content-feed/views/content-feed.html:13
+#: client/app/modules/common/content-feed/views/content-feed.html:18
 msgid "Voted for"
 msgstr ""
 
@@ -663,17 +677,17 @@ msgstr ""
 msgid "You need an email address"
 msgstr ""
 
-#: client/app/modules/admin/categories/services/categories.service.js:48
+#: client/app/modules/admin/categories/services/categories.service.js:60
 #: client/app/modules/admin/committees/services/committees.service.js:47
 msgid "Your category is deleted!"
 msgstr ""
 
-#: client/app/modules/admin/categories/services/categories.service.js:53
+#: client/app/modules/admin/categories/services/categories.service.js:65
 #: client/app/modules/admin/committees/services/committees.service.js:52
 msgid "Your category is not deleted!"
 msgstr ""
 
-#: client/app/modules/admin/categories/services/categories.service.js:28
+#: client/app/modules/admin/categories/services/categories.service.js:40
 #: client/app/modules/admin/committees/services/committees.service.js:27
 msgid "Your category is safe with us!"
 msgstr ""
@@ -722,15 +736,15 @@ msgstr ""
 msgid "Your passwords need to match"
 msgstr ""
 
-#: client/app/modules/admin/posts/services/posts.service.js:52
+#: client/app/modules/admin/posts/services/posts.service.js:61
 msgid "Your post is deleted!"
 msgstr ""
 
-#: client/app/modules/admin/posts/services/posts.service.js:57
+#: client/app/modules/admin/posts/services/posts.service.js:66
 msgid "Your post is not deleted!"
 msgstr ""
 
-#: client/app/modules/admin/posts/services/posts.service.js:32
+#: client/app/modules/admin/posts/services/posts.service.js:41
 msgid "Your post is safe with us!"
 msgstr ""
 

@@ -1,0 +1,38 @@
+.site-nav-links {
+  color: #9B9B9B;
+  margin-top: 15px;
+  a {
+    height: 30px;
+    display: block;
+    padding-right: 10px;
+    color: #9B9B9B;
+    line-height: 28px;
+    &.active {
+      background-color : #E3E3E3;
+      color: #000000;
+      font-weight: bold;
+    }
+
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .primary-link {
+    font-weight: bold;
+  }
+  .secondary-link {
+    height: 20px;
+    font-size: 12px;
+    padding-right: 15px;
+  }
+  hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-top: 1px solid #d8d8d8;
+  }
+  .section-title {
+    font-weight: bold;
+    margin-right: 20px;
+    margin-bottom: 5px;
+  }
+}
