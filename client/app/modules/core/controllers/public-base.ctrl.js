@@ -11,7 +11,7 @@
     .module('com.module.core')
     .controller('PublicBaseCtrl', function ($document) {
 
-      $document.find('body').css('direction','rtl');
+      $document.find('body').attr('dir','rtl');
     });
 
 })();

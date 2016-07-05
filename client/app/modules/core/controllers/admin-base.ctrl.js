@@ -12,7 +12,7 @@
     .controller('AdminBaseCtrl', function ($scope, $rootScope,$document) {
       $scope.count = {};
       $scope.boxes = $rootScope.dashboardBox;
-      $document.find('body').css('direction','ltr');
+      $document.find('body').attr('dir','ltr');
     });
 
 })();

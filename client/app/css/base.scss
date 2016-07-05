@@ -1,12 +1,23 @@
 @import "variables";
 @import "responsive";
 
+@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
+
 body {
-  direction: rtl;
+  font-family: "Alef Hebrew",
+  “Helvetica Neue”,
+  Helvetica,
+  Arial,
+  sans-serif;
   background-color: #F1F1F1;
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 0px;
+  font-family: "Alef Hebrew",
+  “Helvetica Neue”,
+  Helvetica,
+  Arial,
+  sans-serif;
 }
 @include media-min($layout-breakpoint-sm) {
 
@@ -23,3 +34,12 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.transparent-btn-square {
+  background-color: rgba(255, 255, 255, 0.23);
+  border: 1px #fff solid;
+  height: 30px;
+}
+/* you can use this to test the tab functionality */
+/*a:focus, a:hover {
+  color: red !important;
+}*/

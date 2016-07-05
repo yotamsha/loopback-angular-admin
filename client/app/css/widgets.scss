@@ -1,0 +1,15 @@
+@import "variables";
+.about-widget {
+  background-color: $primary-color;
+  color: #ffffff;
+  border: 1px #ffffff solid;
+  border-radius: 4px;
+  padding: 20px 25px 20px 25px;
+  .about-title {
+    margin-bottom: 10px;
+  }
+  .about-text {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+}

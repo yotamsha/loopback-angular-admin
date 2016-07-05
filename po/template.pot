@@ -8,6 +8,14 @@ msgstr ""
 msgid "About"
 msgstr ""
 
+#: client/app/modules/common/widgets-sidebar/views/widgets-sidebar.html:5
+msgid "About the team"
+msgstr ""
+
+#: client/app/modules/common/widgets-sidebar/views/widgets-sidebar.html:4
+msgid "About us text"
+msgstr ""
+
 #: client/app/modules/admin/files/views/upload.html:21
 msgid "Actions"
 msgstr ""
@@ -504,6 +512,7 @@ msgstr ""
 
 #: client/app/modules/admin/users/views/login.html:16
 #: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:53
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:6
 msgid "Sign in"
 msgstr ""
 
@@ -644,16 +653,20 @@ msgstr ""
 msgid "Variables"
 msgstr ""
 
-#: client/app/modules/common/content-feed/views/content-feed.html:21
+#: client/app/modules/common/content-feed/views/content-feed.html:23
 msgid "Voted against"
 msgstr ""
 
-#: client/app/modules/common/content-feed/views/content-feed.html:18
+#: client/app/modules/common/content-feed/views/content-feed.html:20
 msgid "Voted for"
 msgstr ""
 
 #: client/app/modules/core/views/admin/home.html:6
 msgid "Welcome!"
+msgstr ""
+
+#: client/app/modules/common/widgets-sidebar/views/widgets-sidebar.html:3
+msgid "Who we are?"
 msgstr ""
 
 #: client/app/modules/admin/users/controllers/login.ctrl.js:102

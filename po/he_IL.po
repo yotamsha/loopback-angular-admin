@@ -16,6 +16,17 @@ msgstr ""
 msgid "About"
 msgstr "אודות"
 
+#: client/app/modules/common/widgets-sidebar/views/widgets-sidebar.html:5
+msgid "About the team"
+msgstr "הכירו את הצוות"
+
+#: client/app/modules/common/widgets-sidebar/views/widgets-sidebar.html:4
+msgid "About us text"
+msgstr ""
+"ePart הוא סטארט-אפ חברתי, שמחבר את האזרחים ישירות אל הנבחרים שלהם, מקצר את "
+"המרחק בין המקום בו הם נמצאים לכנסת ישראל, לרשות המקומית שלהם או לממשלה ונותן "
+"להם את היכולת להשפיע."
+
 #: client/app/modules/admin/files/views/upload.html:21
 msgid "Actions"
 msgstr ""
@@ -511,11 +522,12 @@ msgid "Settings"
 msgstr ""
 
 #: client/app/modules/admin/users/views/login.html:16
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:53
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:6
 msgid "Sign in"
 msgstr "התחבר"
 
 #: client/app/modules/admin/users/views/login.html:7
-#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:53
 msgid "Sign In"
 msgstr ""
 
@@ -652,17 +664,21 @@ msgstr ""
 msgid "Variables"
 msgstr ""
 
-#: client/app/modules/common/content-feed/views/content-feed.html:21
+#: client/app/modules/common/content-feed/views/content-feed.html:23
 msgid "Voted against"
 msgstr "נגד"
 
-#: client/app/modules/common/content-feed/views/content-feed.html:18
+#: client/app/modules/common/content-feed/views/content-feed.html:20
 msgid "Voted for"
 msgstr "בעד"
 
 #: client/app/modules/core/views/admin/home.html:6
 msgid "Welcome!"
 msgstr ""
+
+#: client/app/modules/common/widgets-sidebar/views/widgets-sidebar.html:3
+msgid "Who we are?"
+msgstr "מי אנחנו?"
 
 #: client/app/modules/admin/users/controllers/login.ctrl.js:102
 msgid "You are logged in!"
