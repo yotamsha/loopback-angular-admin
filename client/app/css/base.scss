@@ -42,6 +42,16 @@ a:hover {
   border: 1px #fff solid;
   height: 30px;
 }
+.transparent-btn-rounded {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px #ffffff solid;
+  border-radius: 11px;
+  height: 25px;
+  font-size: 12px;
+  margin: 3px;
+  min-width: 50px;
+  color: #ffffff;
+}
 /* you can use this to test the tab functionality */
 /*a:focus, a:hover {
   color: red !important;
