@@ -1,7 +1,7 @@
 <div class="feed-items-container" ng-repeat="postsSection in feedPosts">
   <div class="feed-section-title">
     <h3>{{postsSection.title}}</h3>
-    <h6>{{postsSection.subtitle}}</h6>
+    <h5>{{postsSection.subtitle}}</h5>
   </div>
   <div class="feed-post-item" ng-repeat="post in postsSection.posts">
     <a ui-sref="^.post({permaLink: post.permaLink, id: post.id})">
@@ -12,7 +12,7 @@
     <div class="content-display">
       <div class="texts-wrapper">
         <a ui-sref="^.post({permaLink: post.permaLink, id: post.id})"><h3>{{post.title}}</h3></a>
-        <a class="hidden-xs" ui-sref="^.post({permaLink: post.permaLink, id: post.id})"><h6>{{post.subtitle}}</h6>
+        <a class="hidden-xs" ui-sref="^.post({permaLink: post.permaLink, id: post.id})"><h5>{{post.subtitle}}</h5>
         </a>
         </divclas>
         <div class="user-engagement-bar">

@@ -19,6 +19,9 @@ h1, h2, h3, h4, h5, h6 {
   Arial,
   sans-serif;
 }
+a:hover {
+  text-decoration: underline;
+}
 @include media-min($layout-breakpoint-sm) {
 
   .page-content-container {

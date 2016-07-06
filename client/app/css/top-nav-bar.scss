@@ -7,8 +7,7 @@
     max-width: $desktop-max-width;
     height: 50px;
     margin: auto;
-    color: #ffffff;
-
+    font-size: 16px;
     .logo-img {
       background-image: url('../images/epart-logo.png');
       background-size: contain;
@@ -16,17 +15,14 @@
       background-position: center;
       height: 42px;
     }
+    a {
+      color: #ffffff;
+    }
   }
   .home-header-image {
     background-color: #F1F1F1;
-    /*
-    height: 300px;
-    */
     width: 100%;
     background-image: url("../images/knesset-banner.jpg");
-    /*
-    background-size: contain;
-    */
     background-size: 100% auto;
     background-repeat: no-repeat;
     img {

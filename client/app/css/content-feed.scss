@@ -26,9 +26,6 @@ $post-height-xs : 100px;
     a {
       color : #000000;
     }
-    a:hover {
-      text-decoration: underline;
-    }
     height: $post-height;
     @include media-max($layout-breakpoint-sm) {
       height: $post-height-xs;
@@ -80,6 +77,14 @@ $post-height-xs : 100px;
           color: #ffffff;
           text-align: center;
           padding-top: 2px;
+
+          @include media-max($layout-breakpoint-sm) {
+            height: 22px;
+            width: 60px;
+            padding-top: 1px;
+          }
+
+
           &.upvotes {
             background-color: green;
             right: 0px;
