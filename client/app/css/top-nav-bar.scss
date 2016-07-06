@@ -3,6 +3,8 @@
 #top-nav-bar {
   background-color: $primary-color;
   margin-bottom: 15px;
+  color: #ffffff;
+
   .nav-bar-content {
     max-width: $desktop-max-width;
     height: 50px;
@@ -14,6 +16,15 @@
       background-repeat: no-repeat;
       background-position: center;
       height: 42px;
+    }
+    .user-avatar {
+      height: 35px;
+      width: 35px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      margin-left: 6px;
+      border-radius: 50%;
+      box-sizing: content-box;
     }
     a {
       color: #ffffff;

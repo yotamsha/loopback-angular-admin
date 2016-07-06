@@ -91,6 +91,10 @@
             }
             cb(self.currentUser);
           }
+        },
+
+        requestCurrentUser: function(){
+          return self.currentUser;
         }
       };
       return self;

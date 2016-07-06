@@ -11,18 +11,18 @@
             if (rejection.status === 401) {
               //$rootScope.currentUser = null;
               // save the current location so that login can redirect back
-              $location.nextAfterLogin = $location.path();
+              //$location.nextAfterLogin = $location.path();
 
               if ($location.path() === '/router' || $location.path() ===
                 '/login') {
                 console.log('401 while on router on login path');
               } else {
-                if ($location.path() !== '/register') {
-                  $location.path('/login');
+/*                if ($location.path() !== '/register') {
+                   $location.path('/login');
                 }
                 CoreService.toastWarning('Error 401 received',
                   'We received a 401 error from the API! Redirecting to login'
-                );
+                );*/
               }
             }
             if (rejection.status === 404) {

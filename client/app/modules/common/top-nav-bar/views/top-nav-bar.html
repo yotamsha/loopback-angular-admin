@@ -1,13 +1,17 @@
 <div id="top-nav-bar" >
-  <div class="nav-bar-content container row">
-    <div class="col-xs-3 ep-vcenter"></div>
-    <div class="col-xs-6 logo-img ep-vcenter"></div>
-    <div class="col-xs-3 ep-vcenter">
-      <a href="#">{{::'Sign in' | translate}}</a>
+  <div class="nav-bar-content container row ">
+    <div class="col-sm-3 ep-vcenter"></div>
+    <div class="hidden-xs col-sm-6 logo-img ep-vcenter"></div>
+    <div class="col-xs-12 col-sm-3 ep-vcenter">
+      <a  ng-show="!ctrl.currentUser" href="#">{{::'Sign in' | translate}}</a>
+      <div ng-show="ctrl.currentUser" class="logged-user-details">
+        <img ng-src="{{ctrl.avatarImageUrl}}" class="user-avatar"/>
+        {{currentUser.lastName}} {{currentUser.firstName}}
+      </div>
     </div>
   </div>
   <div class="home-header-image">
-    <img src="../../../../images/knesset-banner.jpg"><!-- I'm invisible! yey!-->
+    <img src="../../../../images/knesset-banner.jpg"><!-- I'm invisible - only here to take the background image space-->
   </div>
 
 

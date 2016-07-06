@@ -13,11 +13,9 @@
       return {
         templateUrl: 'modules/common/top-nav-bar/views/top-nav-bar.html',
         restrict: 'E',
-        transclude: true,
+        transclude: false,
         controllerAs: 'ctrl',
-        controller : 'TopNavBarCtrl',
-        scope: {
-        },
+        controller : 'TopNavBarCtrl'
       };
     });
 

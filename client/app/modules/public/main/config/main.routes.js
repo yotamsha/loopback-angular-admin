@@ -10,6 +10,12 @@
             controller: 'MainCtrl',
             controllerAs: 'ctrl',
             resolve: {
+              user : [
+                'AppAuth',
+                function(AppAuth){
+                  return AppAuth.requestCurrentUser();
+                }
+              ],
               todayPosts: [
                 'PostsService',
                 function (PostsService) {

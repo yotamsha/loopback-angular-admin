@@ -17,12 +17,13 @@
       ApiService.checkConnection()
         .then(function () {
           console.log('ApiService.checkConnection success');
-          if (!AppAuth.currentUser) {
+          $location.path('/');
+/*          if (!AppAuth.currentUser) {
             $location.path('/login');
           } else {
             //$location.path('/admin');
             $location.path('/');
-          }
+          }*/
         })
         .catch(function (err) {
           console.log('ApiService.checkConnection err: ' + err);
