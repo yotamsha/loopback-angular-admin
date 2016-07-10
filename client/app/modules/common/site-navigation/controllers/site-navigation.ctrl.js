@@ -5,7 +5,7 @@
   'use strict';
   angular
     .module('com.module.common')
-    .controller('siteNavigationCtrl', function (CategoriesService, gettextCatalog, $state, $stateParams, AppAuth) {
+    .controller('siteNavigationCtrl', function (CategoriesService, gettextCatalog, $state, $stateParams, AppAuth, DialogsService) {
       var ctrl = this;
       ctrl.$state = $state;
       ctrl.$stateParams = $stateParams;
@@ -35,11 +35,6 @@
           {
             text: gettextCatalog.getString('Home'),
             state: 'app.public.main'
-          },
-          {
-            text: gettextCatalog.getString('Sign in'),
-            state: 'app.public.login',
-            showForAnonymousOnly  : true
           }
         ];
         ctrl.secondaryLinks = [
@@ -55,13 +50,15 @@
 
       }
 
-      ctrl.showItem = function(item) {
-        if (item.showForAnonymousOnly && ctrl.sessionData.currentUser){ // hide item if no session
-          return false;
-        } else {
-          return true;
-        }
+      ctrl.openLoginDialog = function () {
+
+        var modalInstance = DialogsService.openDialog('login');
+
+        modalInstance.result.then(function () {
+        }, function () {
+        });
       };
+
       ctrl.navClass = function (state) {
         return state === $state.current.name ? 'active' : '';
 

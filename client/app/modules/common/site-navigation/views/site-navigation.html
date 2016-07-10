@@ -1,10 +1,14 @@
 <div class="site-nav-links">
-<!--  <a ui-sref="app.public.main" ng-class="{active : ctrl.$state.is('app.public.main')}">
-    {{'Home' | translate }}
-  </a>-->
+  <!-- Main site links -->
+
   <ul>
       <li ng-repeat="li in ctrl.primaryLinks">
-        <a ui-sref="{{li.state}}" ng-show="ctrl.showItem(li)" class="primary-link" ng-class="{active : ctrl.$state.is(li.state)}">{{li.text | translate}}</a>
+        <a ui-sref="{{li.state}}"
+           class="primary-link" ng-class="{active : ctrl.$state.is(li.state)}">{{li.text | translate}}</a>
+      </li>
+      <li>
+        <a href="#" ng-show="!ctrl.sessionData.currentUser"  ng-click="ctrl.openLoginDialog()"
+           class="primary-link" ng-class="{active : ctrl.$state.is(li.state)}">{{'Sign in' | translate}}</a>
       </li>
   </ul>
   <hr/>
@@ -20,7 +24,7 @@
   </ul>
   <hr/>
 
-  <!-- Site links -->
+  <!-- Other site links -->
   <ul>
     <li ng-repeat="li in ctrl.secondaryLinks">
       <a ui-sref="{{li.state}}" class="secondary-link" ng-class="{active : ctrl.$state.is(li.state)}">{{li.text}}</a>

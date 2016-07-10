@@ -52,6 +52,26 @@ a:hover {
   min-width: 50px;
   color: #ffffff;
 }
+.modal-dialog.modal-lg{
+  -webkit-transform: translate(0,25%) !important;
+  -ms-transform: translate(0,25%) !important;
+  transform: translate(0,25%) !important;
+}
+.modal.in > .modal-dialog.modal-lg {
+  -webkit-transform: translate(0,25%) !important;
+  -ms-transform: translate(0,25%) !important;
+  transform: translate(0,25%) !important;
+}
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.modal-backdrop.in {
+  opacity: 0.8 !important;
+}
+
 /* you can use this to test the tab functionality */
 /*a:focus, a:hover {
   color: red !important;

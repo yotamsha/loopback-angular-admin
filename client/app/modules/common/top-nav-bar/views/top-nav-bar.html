@@ -10,7 +10,7 @@
 
     </div>
     <div class="col-xs-12 col-sm-3 ep-vcenter">
-      <a  ng-show="!ctrl.sessionData.currentUser" ng-click="ctrl.openLoginDialog()">{{::'Sign in' | translate}}</a>
+      <a href="#" ng-show="!ctrl.sessionData.currentUser" ng-click="ctrl.openLoginDialog()">{{::'Sign in' | translate}}</a>
       <div ng-show="ctrl.sessionData.currentUser" class="logged-user-details">
         <img ng-src="{{ctrl.avatarImageUrl}}" class="user-avatar"/>
         {{ctrl.sessionData.currentUser.lastName}} {{ctrl.sessionData.currentUser.firstName}}
