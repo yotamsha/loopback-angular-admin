@@ -2,10 +2,13 @@
   'use strict';
   angular
     .module('com.module.core')
-    .service('CoreService', function (ENV, SweetAlert, toasty) {
+    .service('CoreService', function (ENV, SweetAlert, toasty, $rootScope) {
 
       this.env = ENV;
-
+      
+      this.setPageTitle = function(title){
+        $rootScope.title = "ePart - " + title;
+      }
       this.alert = function (title, text) {
         SweetAlert.swal(title, text);
       };

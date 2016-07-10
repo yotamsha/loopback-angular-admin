@@ -5,7 +5,9 @@
   'use strict';
   angular
     .module('com.module.category')
-    .controller('CategoryCtrl', function (category, gettextCatalog) {
+    .controller('CategoryCtrl', function (category, gettextCatalog, CoreService) {
+      CoreService.setPageTitle(category.name);
+
       this.category = category;
       this.posts = category.posts || [];
       this.feedPosts = [

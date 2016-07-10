@@ -19,16 +19,8 @@
         //$scope.currentUser = User.getCurrent();
         AppAuth.requestCurrentUser();
       });*/
-      
-      $scope.menuoptions = $rootScope.menu;
 
-      $scope.logout = function () {
-        AppAuth.logout(function () {
-          CoreService.toastSuccess(gettextCatalog.getString('Logged out'),
-            gettextCatalog.getString('You are logged out!'));
-          $state.go('login');
-        });
-      };
+      $scope.menuoptions = $rootScope.menu;
 
     });
 

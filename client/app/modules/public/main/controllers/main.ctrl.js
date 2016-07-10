@@ -5,8 +5,10 @@
   'use strict';
   angular
     .module('com.module.main')
-    .controller('MainCtrl', function (todayPosts, popularPosts, gettextCatalog, user, $scope) {
+    .controller('MainCtrl', function (todayPosts, popularPosts, gettextCatalog, CoreService) {
       var ctrl = this;
+      CoreService.setPageTitle(gettextCatalog.getString('Main Page Title'));
+
       var dateLocaleOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
       ctrl.feedPosts = [

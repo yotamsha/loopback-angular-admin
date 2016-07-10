@@ -311,7 +311,7 @@ msgstr ""
 msgid "First Name"
 msgstr ""
 
-#: client/app/modules/public/main/controllers/main.ctrl.js:18
+#: client/app/modules/public/main/controllers/main.ctrl.js:21
 msgid "Going on Today"
 msgstr "מה קורה היום?"
 
@@ -358,14 +358,6 @@ msgstr ""
 msgid "Last Name"
 msgstr ""
 
-#: client/app/modules/admin/users/controllers/login.ctrl.js:101
-msgid "Logged in"
-msgstr ""
-
-#: client/app/modules/core/controllers/app.ctrl.js:27
-msgid "Logged out"
-msgstr ""
-
 #: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:4
 msgid "Logout"
 msgstr "התנתק"
@@ -373,6 +365,10 @@ msgstr "התנתק"
 #: client/app/modules/admin/posts/services/posts.service.js:120
 msgid "Main Image"
 msgstr ""
+
+#: client/app/modules/public/main/controllers/main.ctrl.js:10
+msgid "Main Page Title"
+msgstr "עמוד הבית"
 
 #: client/app/modules/admin/categories/views/main.html:3
 msgid "Manage your categories here!"
@@ -462,8 +458,8 @@ msgstr ""
 msgid "Permalink"
 msgstr ""
 
-#: client/app/modules/public/category/controllers/category.ctrl.js:13
-#: client/app/modules/public/main/controllers/main.ctrl.js:13
+#: client/app/modules/public/category/controllers/category.ctrl.js:15
+#: client/app/modules/public/main/controllers/main.ctrl.js:16
 msgid "Popular"
 msgstr "פופולריים"
 
@@ -526,7 +522,7 @@ msgstr ""
 
 #: client/app/modules/admin/users/views/login.html:16
 #: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:39
-#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:8
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:13
 msgid "Sign in"
 msgstr "התחבר"
 
@@ -624,8 +620,8 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr ""
 
-#: client/app/modules/public/category/controllers/category.ctrl.js:14
-#: client/app/modules/public/main/controllers/main.ctrl.js:14
+#: client/app/modules/public/category/controllers/category.ctrl.js:16
+#: client/app/modules/public/main/controllers/main.ctrl.js:17
 msgid "Top ranked posts"
 msgstr "על מה כולם מדברים?"
 
@@ -682,14 +678,6 @@ msgstr ""
 #: client/app/modules/common/widgets-sidebar/views/widgets-sidebar.html:3
 msgid "Who we are?"
 msgstr "מי אנחנו?"
-
-#: client/app/modules/admin/users/controllers/login.ctrl.js:102
-msgid "You are logged in!"
-msgstr ""
-
-#: client/app/modules/core/controllers/app.ctrl.js:28
-msgid "You are logged out!"
-msgstr ""
 
 #: client/app/modules/admin/users/controllers/register.ctrl.js:122
 msgid "You are registered!"
