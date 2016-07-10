@@ -5,7 +5,7 @@
   'use strict';
   angular
     .module('com.module.common')
-    .controller('siteNavigationCtrl', function (CategoriesService, gettextCatalog, $state, $stateParams) {
+    .controller('siteNavigationCtrl', function (CategoriesService, gettextCatalog, $state, $stateParams, AppAuth) {
       var ctrl = this;
       ctrl.$state = $state;
       ctrl.$stateParams = $stateParams;
@@ -29,6 +29,7 @@
         CategoriesService.getCategories().then(function(response){
           ctrl.categoriesList = response;
         });
+        ctrl.sessionData = AppAuth.getSessionData();
 
         ctrl.primaryLinks = [
           {
@@ -37,7 +38,8 @@
           },
           {
             text: gettextCatalog.getString('Sign in'),
-            state: 'app.public.login'
+            state: 'app.public.login',
+            showForAnonymousOnly  : true
           }
         ];
         ctrl.secondaryLinks = [
@@ -53,6 +55,13 @@
 
       }
 
+      ctrl.showItem = function(item) {
+        if (item.showForAnonymousOnly && ctrl.sessionData.currentUser){ // hide item if no session
+          return false;
+        } else {
+          return true;
+        }
+      };
       ctrl.navClass = function (state) {
         return state === $state.current.name ? 'active' : '';
 

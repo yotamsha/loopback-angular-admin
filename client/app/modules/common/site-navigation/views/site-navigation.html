@@ -2,29 +2,30 @@
 <!--  <a ui-sref="app.public.main" ng-class="{active : ctrl.$state.is('app.public.main')}">
     {{'Home' | translate }}
   </a>-->
-  <div ng-repeat="li in ctrl.primaryLinks">
-    <a ui-sref="{{li.state}}" class="primary-link" ng-class="{active : ctrl.$state.is(li.state)}">{{li.text | translate}}</a>
-  </div>
-
+  <ul>
+      <li ng-repeat="li in ctrl.primaryLinks">
+        <a ui-sref="{{li.state}}" ng-show="ctrl.showItem(li)" class="primary-link" ng-class="{active : ctrl.$state.is(li.state)}">{{li.text | translate}}</a>
+      </li>
+  </ul>
   <hr/>
 
   <!-- Categories links -->
 
   <div class="section-title">{{'Categories' | translate }}</div>
-
-  <div ng-repeat="category in ctrl.categoriesList">
-
-    <a ui-sref="^.category({slug: category.slug, id: category.id})"
-       ng-class="{active: ctrl.$stateParams.slug === category.slug }" >{{category.name}}</a>
-
-  </div>
-
+  <ul>
+    <li ng-repeat="category in ctrl.categoriesList">
+      <a ui-sref="^.category({slug: category.slug, id: category.id})"
+         ng-class="{active: ctrl.$stateParams.slug === category.slug }" >{{category.name}}</a>
+    </li>
+  </ul>
   <hr/>
 
   <!-- Site links -->
+  <ul>
+    <li ng-repeat="li in ctrl.secondaryLinks">
+      <a ui-sref="{{li.state}}" class="secondary-link" ng-class="{active : ctrl.$state.is(li.state)}">{{li.text}}</a>
+    </li>
+  </ul>
 
-  <div ng-repeat="li in ctrl.secondaryLinks">
-    <a ui-sref="{{li.state}}" class="secondary-link" ng-class="{active : ctrl.$state.is(li.state)}">{{li.text}}</a>
-  </div>
 
 </div>
