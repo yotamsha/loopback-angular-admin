@@ -1,6 +1,5 @@
 @import "variables";
 @import "responsive";
-
 @import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
 
 body {
@@ -11,6 +10,7 @@ body {
   sans-serif;
   background-color: #F1F1F1;
 }
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0px;
   font-family: "Alef Hebrew",
@@ -19,9 +19,11 @@ h1, h2, h3, h4, h5, h6 {
   Arial,
   sans-serif;
 }
+
 a:hover {
   text-decoration: underline;
 }
+
 @include media-min($layout-breakpoint-sm) {
 
   .page-content-container {
@@ -37,11 +39,13 @@ a:hover {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
 .transparent-btn-square {
   background-color: rgba(255, 255, 255, 0.23);
   border: 1px #fff solid;
   height: 30px;
 }
+
 .transparent-btn-rounded {
   background-color: rgba(255, 255, 255, 0);
   border: 1px #ffffff solid;
@@ -52,24 +56,62 @@ a:hover {
   min-width: 50px;
   color: #ffffff;
 }
-.modal-dialog.modal-lg{
-  -webkit-transform: translate(0,25%) !important;
-  -ms-transform: translate(0,25%) !important;
-  transform: translate(0,25%) !important;
+
+.modal-dialog {
+  .close-btn {
+    position: absolute;
+    z-index: 2000;
+    top: 10px;
+    left: 10px;
+  }
 }
+
+.modal-dialog.modal-lg {
+  -webkit-transform: translate(0, 25%) !important;
+  -ms-transform: translate(0, 25%) !important;
+  transform: translate(0, 25%) !important;
+}
+
 .modal.in > .modal-dialog.modal-lg {
-  -webkit-transform: translate(0,25%) !important;
-  -ms-transform: translate(0,25%) !important;
-  transform: translate(0,25%) !important;
+  -webkit-transform: translate(0, 25%) !important;
+  -ms-transform: translate(0, 25%) !important;
+  transform: translate(0, 25%) !important;
+  -webkit-transition-duration: 5s; /* Safari */
+  transition-duration: 5s;
 }
+
 .modal-backdrop {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
 }
+
 .modal-backdrop.in {
   opacity: 0.8 !important;
+}
+
+@include media-max($layout-breakpoint-sm) {
+  .modal-dialog {
+    margin: 0px;
+  }
+
+  .modal-content {
+    height: 100%;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border-radius: 0px;
+  }
+  .modal-dialog.modal-lg {
+    -webkit-transform: translate(0, 0) !important;
+    -ms-transform: translate(0, 0) !important;
+    transform: translate(0, 0) !important;
+  }
+  .modal.in > .modal-dialog.modal-lg {
+    -webkit-transform: translate(0, 0) !important;
+    -ms-transform: translate(0, 0) !important;
+    transform: translate(0, 0) !important;
+    height: 100%;
+  }
 }
 
 /* you can use this to test the tab functionality */

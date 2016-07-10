@@ -19,7 +19,8 @@
         return $modal.open({
           templateUrl : dialog.templateUrl,
           controller : dialog.controller,
-          size : 'lg'
+          size : 'lg',
+          windowTemplateUrl : 'modules/core/views/elements/dialog-template.html'
         });
       };
 
