@@ -10,9 +10,9 @@
             controller: 'MainCtrl',
             controllerAs: 'ctrl',
             resolve: {
-              user : [
+              user: [
                 'AppAuth',
-                function(AppAuth){
+                function (AppAuth) {
                   return AppAuth.requestCurrentUser();
                 }
               ],
@@ -40,7 +40,7 @@
               ]
             }
           });
-      
+
       }
     );
 })();

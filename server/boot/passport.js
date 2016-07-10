@@ -91,14 +91,14 @@ module.exports = function(app) {
 
   var ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 
-  app.get('/auth/account', ensureLoggedIn('/'), function(req, res, next) {
+  app.get( app.get('restApiRoot') + '/auth/account', ensureLoggedIn('/'), function(req, res, next) {
     console.log('Logged in', req.user)
     //Copy the cookie over for our AppAuth service that looks for accessToken cookie
     res.cookie('accessToken', req.signedCookies['access_token'],{signed: true});
     res.redirect('/#/app');
   });
 
-  app.get('/auth/current', function(req, res, next) {
+  app.get( app.get('restApiRoot') + '/auth/current', function(req, res, next) {
     if (!req.isAuthenticated || !req.isAuthenticated()) {
       return res.status(200).json({});
     }
@@ -108,9 +108,9 @@ module.exports = function(app) {
     res.status(200).json(ret);
   });
 
-  app.post('/auth/logout', function(req, res, next) {
+  app.post( app.get('restApiRoot') + '/auth/logout', function(req, res, next) {
     req.session.destroy(function(err){
-      res.redirect('/');
+      res.send(200);
     });
   });
 };

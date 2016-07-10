@@ -11,7 +11,7 @@
    **/
   angular
     .module('com.module.users')
-    .controller('LoginCtrl', function ($scope, $routeParams, $location, CoreService, User, AppAuth, AuthProvider, gettextCatalog) {
+    .controller('LoginCtrl', function ($scope, $routeParams, $location, CoreService, User, AppAuth, AuthProvider, gettextCatalog, $modalInstance) {
 
       var TWO_WEEKS = 1000 * 60 * 60 * 24 * 7 * 2;
 
@@ -82,9 +82,14 @@
       });
 
       $scope.login = function () {
+        AppAuth.login($scope.credentials, function(){
+          // success
+          $modalInstance.close();
+        }, function(){
+          // error
+        });
 
-
-        $scope.loginResult = User.login({
+/*        $scope.loginResult = User.login({
             include: 'user',
             rememberMe: $scope.credentials.rememberMe
           }, $scope.credentials,
@@ -108,7 +113,7 @@
           },
           function (res) {
             $scope.loginError = res.data.error;
-          });
+          });*/
 
       };
 

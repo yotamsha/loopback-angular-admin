@@ -5,10 +5,11 @@
   'use strict';
   angular
     .module('com.module.main')
-    .controller('MainCtrl', function (todayPosts, popularPosts, gettextCatalog) {
+    .controller('MainCtrl', function (todayPosts, popularPosts, gettextCatalog, user, $scope) {
+      var ctrl = this;
       var dateLocaleOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
-      this.feedPosts = [
+      ctrl.feedPosts = [
         {
           title: gettextCatalog.getString('Popular'),
           subtitle: gettextCatalog.getString('Top ranked posts'),

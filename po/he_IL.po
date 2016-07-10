@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:59
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:45
 msgid "About"
 msgstr "אודות"
 
@@ -75,7 +75,6 @@ msgstr ""
 msgid "Browse your data here!"
 msgstr ""
 
-#: client/app/modules/admin/browser/config/browser.config.js:6
 #: client/app/modules/admin/browser/views/main.html:2
 msgid "Browser"
 msgstr "דפדפן"
@@ -320,7 +319,7 @@ msgstr "מה קורה היום?"
 msgid "Hello,"
 msgstr ""
 
-#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:49
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:35
 #: client/app/modules/common/site-navigation/views/site-navigation.html:3
 #: client/app/modules/core/views/admin/home.html:5
 msgid "Home"
@@ -363,9 +362,13 @@ msgstr ""
 msgid "Logged in"
 msgstr ""
 
-#: client/app/modules/core/controllers/app.ctrl.js:26
+#: client/app/modules/core/controllers/app.ctrl.js:27
 msgid "Logged out"
 msgstr ""
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:4
+msgid "Logout"
+msgstr "התנתק"
 
 #: client/app/modules/admin/posts/services/posts.service.js:120
 msgid "Main Image"
@@ -478,7 +481,7 @@ msgstr ""
 msgid "Posts"
 msgstr ""
 
-#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:63
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:49
 msgid "Privacy"
 msgstr "הצהרת פרטיות"
 
@@ -522,8 +525,8 @@ msgid "Settings"
 msgstr ""
 
 #: client/app/modules/admin/users/views/login.html:16
-#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:53
-#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:6
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:39
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:8
 msgid "Sign in"
 msgstr "התחבר"
 
@@ -664,11 +667,11 @@ msgstr ""
 msgid "Variables"
 msgstr ""
 
-#: client/app/modules/common/content-feed/views/content-feed.html:23
+#: client/app/modules/common/content-feed/views/content-feed.html:25
 msgid "Voted against"
 msgstr "נגד"
 
-#: client/app/modules/common/content-feed/views/content-feed.html:20
+#: client/app/modules/common/content-feed/views/content-feed.html:22
 msgid "Voted for"
 msgstr "בעד"
 
@@ -684,7 +687,7 @@ msgstr "מי אנחנו?"
 msgid "You are logged in!"
 msgstr ""
 
-#: client/app/modules/core/controllers/app.ctrl.js:27
+#: client/app/modules/core/controllers/app.ctrl.js:28
 msgid "You are logged out!"
 msgstr ""
 

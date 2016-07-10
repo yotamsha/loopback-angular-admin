@@ -62,7 +62,7 @@
       'com.module.post'
 
     ])
-    .run(function ($rootScope, $cookies, gettextCatalog) {
+    .run(function ($rootScope, $cookies, gettextCatalog, AppAuth) {
       var DEFAULT_LANGUAGE = 'he_IL';
       $rootScope.locales = {
         'en': {
@@ -90,6 +90,8 @@
       }
 
       gettextCatalog.setCurrentLanguage($rootScope.locale.lang);
+      AppAuth.requestCurrentUser();
+
 
     })
     .run(function (formlyConfig) {

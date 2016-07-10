@@ -1,12 +1,14 @@
 <div id="top-nav-bar" >
   <div class="nav-bar-content container row ">
-    <div class="col-sm-3 ep-vcenter"></div>
+    <div class="col-sm-3 ep-vcenter">
+      <a href="#" ng-show="ctrl.sessionData.currentUser" ng-click="ctrl.logout()">{{::'Logout' | translate}}</a>
+    </div>
     <div class="hidden-xs col-sm-6 logo-img ep-vcenter"></div>
     <div class="col-xs-12 col-sm-3 ep-vcenter">
-      <a  ng-show="!ctrl.currentUser" href="#">{{::'Sign in' | translate}}</a>
-      <div ng-show="ctrl.currentUser" class="logged-user-details">
+      <a  ng-show="!ctrl.sessionData.currentUser" ng-click="ctrl.openLoginDialog()">{{::'Sign in' | translate}}</a>
+      <div ng-show="ctrl.sessionData.currentUser" class="logged-user-details">
         <img ng-src="{{ctrl.avatarImageUrl}}" class="user-avatar"/>
-        {{currentUser.lastName}} {{currentUser.firstName}}
+        {{ctrl.sessionData.currentUser.lastName}} {{ctrl.sessionData.currentUser.firstName}}
       </div>
     </div>
   </div>

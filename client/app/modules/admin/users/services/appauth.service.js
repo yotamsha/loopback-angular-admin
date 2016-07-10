@@ -6,28 +6,56 @@
 
   angular
     .module('com.module.users')
-    .factory('AppAuth', function ($cookies, User, LoopBackAuth, $http) {
+    .factory('AppAuth', function ($cookies, User, LoopBackAuth, $http, $q, $rootScope, ENV) {
       var self = {
+
+        sessionData : {
+          currentUser : null
+        },
+        /*        $scope.loginResult = User.login({
+         include: 'user',
+         rememberMe: $scope.credentials.rememberMe
+         }, $scope.credentials,
+         function (user) {
+
+         console.log(user.id); // => acess token
+         console.log(user.ttl); // => 1209600 time to live
+         console.log(user.created); // => 2013-12-20T21:10:20.377Z
+         console.log(user.userId); // => 1
+
+         var next = $location.nextAfterLogin || '/';
+         $location.nextAfterLogin = null;
+         AppAuth.currentUser = $scope.loginResult.user;
+         CoreService.toastSuccess(gettextCatalog.getString('Logged in'),
+         gettextCatalog.getString('You are logged in!'));
+         if (next === '/login') {
+         next = '/';
+         }
+         $location.path(next);
+
+         },
+         function (res) {
+         $scope.loginError = res.data.error;
+         });*/
         login: function (data, cb) {
           LoopBackAuth.currentUserId = LoopBackAuth.accessTokenId = null;
-          $http.post('/api/users/login?include=user', {
-            email: data.email,
-            password: data.password
-          })
-            .then(function (response) {
-              if (response.data && response.data.id) {
-                LoopBackAuth.currentUserId = response.data.userId;
-                LoopBackAuth.accessTokenId = response.data.id;
+          User.login({
+              include: 'user',
+              rememberMe: data.rememberMe
+            }, data,function (response) {
+              if (response && response.id) {
+                LoopBackAuth.currentUserId = response.userId;
+                LoopBackAuth.accessTokenId = response.id;
               }
               if (LoopBackAuth.currentUserId === null) {
                 delete $cookies['accessToken'];
                 LoopBackAuth.accessTokenId = null;
               }
               LoopBackAuth.save();
-              if (LoopBackAuth.currentUserId && response.data && response.data
-                  .user) {
-                self.currentUser = response.data.user;
-                cb(self.currentUser);
+              if (LoopBackAuth.currentUserId && response && response.user) {
+                self.sessionData.currentUser = response.user;
+                $rootScope.$broadcast('USER_SESSION_CHANGED',self.sessionData);
+                cb(self.sessionData.currentUser);
 
               } else {
                 cb({});
@@ -48,17 +76,19 @@
             delete $cookies['access_token'];
             delete $cookies['accessToken'];
             //Perform the Passport Logout
-            $http.post('/auth/logout');
+            $http.post(ENV.apiUrl + 'auth/logout');
 
           });
-          self.currentUser = null;
+          self.sessionData.currentUser = null;
+          $rootScope.$broadcast('USER_SESSION_CHANGED',self.sessionData);
+
           cb();
         },
 
         ensureHasCurrentUser: function (cb) {
-          if ((!this.currentUser || this.currentUser.id === 'social') && $cookies.accessToken) {
+          if ((!self.sessionData.currentUser || self.sessionData.currentUser.id === 'social') && $cookies.accessToken) {
             LoopBackAuth.currentUserId = LoopBackAuth.accessTokenId = null;
-            $http.get('/auth/current')
+            $http.get(ENV.apiUrl + '/auth/current')
               .then(function (response) {
                 if (response.data.id) {
                   LoopBackAuth.currentUserId = response.data.id;
@@ -70,14 +100,14 @@
                   LoopBackAuth.accessTokenId = null;
                 }
                 LoopBackAuth.save();
-                self.currentUser = response.data;
-                var profile = self.currentUser && self.currentUser.profiles &&
-                  self.currentUser.profiles.length && self.currentUser.profiles[
+                self.sessionData.currentUser = response.data;
+                var profile = self.sessionData.currentUser && self.sessionData.currentUser.profiles &&
+                  self.sessionData.currentUser.profiles.length && self.sessionData.currentUser.profiles[
                     0];
                 if (profile) {
-                  self.currentUser.name = profile.profile.name;
+                  self.sessionData.currentUser.name = profile.profile.name;
                 }
-                cb(self.currentUser);
+                cb(self.sessionData.currentUser);
               }, function () {
                 console.log('User.getCurrent() err', arguments);
                 LoopBackAuth.currentUserId = LoopBackAuth.accessTokenId =
@@ -86,16 +116,42 @@
                 cb({});
               });
           } else {
-            if(self.currentUser){
+            if (self.sessionData.currentUser) {
               console.log('Using cached current user.');
             }
-            cb(self.currentUser);
+            cb(self.sessionData.currentUser);
           }
         },
 
-        requestCurrentUser: function(){
-          return self.currentUser;
+        requestCurrentUser: function () {
+          var deferred = $q.defer();
+          self.ensureHasCurrentUser(function () {
+            User.getCurrent(function (response) {
+              console.log("got user: ", response);
+              self.sessionData.currentUser = response;
+              $rootScope.$broadcast('USER_SESSION_CHANGED',self.sessionData);
+
+              deferred.resolve(response);
+            }, function (err) {
+              self.sessionData.currentUser = null;
+              $rootScope.$broadcast('USER_SESSION_CHANGED',self.sessionData);
+              console.log("Could not get user session: ", err);
+              deferred.resolve(null);
+
+            });
+
+          });
+          return deferred.promise;
+        },
+
+        getCurrentUser: function () {
+          return self.sessionData.currentUser;
+        },
+
+        getSessionData : function(){
+          return self.sessionData;
         }
+
       };
       return self;
     });
