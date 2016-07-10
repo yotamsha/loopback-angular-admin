@@ -69,6 +69,7 @@
     "grunt-usemin": "3.0.0",
     "grunt-wiredep": "2.0.0",
     "gulp-nodemon": "2.0.3",
+    "grunt-sass": "1.2.0",
     "http-status": "0.2.3",
     "jshint": "2.6.0",
     "jshint-stylish": "1.0.0",
