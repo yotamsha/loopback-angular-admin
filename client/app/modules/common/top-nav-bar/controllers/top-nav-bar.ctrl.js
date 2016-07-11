@@ -19,7 +19,7 @@
       function _init() {
         ctrl.avatarImageUrl = '../../../../images/default-user-avatar.png';
         ctrl.sessionData = AppAuth.getSessionData();
-        userSessionUpdated(ctrl.sessionData.currentUser)
+        userSessionUpdated(ctrl.sessionData.currentUser);
       }
 
       ctrl.openLoginDialog = function () {

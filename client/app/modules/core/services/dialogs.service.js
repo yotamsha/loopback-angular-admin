@@ -11,6 +11,11 @@
         login : {
           templateUrl: 'modules/admin/users/views/login.html',
           controller: 'LoginCtrl'
+        },
+
+        register : {
+          templateUrl: 'modules/admin/users/views/register.html',
+          controller: 'RegisterCtrl'
         }
       };
 
@@ -20,6 +25,7 @@
           templateUrl : dialog.templateUrl,
           controller : dialog.controller,
           size : 'lg',
+          controllerAs : 'ctrl',
           windowTemplateUrl : 'modules/core/views/elements/dialog-template.html'
         });
       };

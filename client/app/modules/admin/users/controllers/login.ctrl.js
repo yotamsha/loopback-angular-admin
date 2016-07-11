@@ -11,7 +11,7 @@
    **/
   angular
     .module('com.module.users')
-    .controller('LoginCtrl', function ($scope, $routeParams, $location, CoreService, User, AppAuth, AuthProvider, gettextCatalog, $modalInstance) {
+    .controller('LoginCtrl', function ($scope, $routeParams, $location, CoreService, User, AppAuth, AuthProvider, gettextCatalog, $modalInstance, DialogsService) {
 
       var TWO_WEEKS = 1000 * 60 * 60 * 24 * 7 * 2;
 
@@ -89,31 +89,12 @@
           // error
         });
 
-/*        $scope.loginResult = User.login({
-            include: 'user',
-            rememberMe: $scope.credentials.rememberMe
-          }, $scope.credentials,
-          function (user) {
+      };
 
-            console.log(user.id); // => acess token
-            console.log(user.ttl); // => 1209600 time to live
-            console.log(user.created); // => 2013-12-20T21:10:20.377Z
-            console.log(user.userId); // => 1
+      $scope.register = function () {
+        $modalInstance.close();
+        DialogsService.openDialog('register');
 
-            var next = $location.nextAfterLogin || '/';
-            $location.nextAfterLogin = null;
-            AppAuth.currentUser = $scope.loginResult.user;
-            CoreService.toastSuccess(gettextCatalog.getString('Logged in'),
-              gettextCatalog.getString('You are logged in!'));
-            if (next === '/login') {
-              next = '/';
-            }
-            $location.path(next);
-
-          },
-          function (res) {
-            $scope.loginError = res.data.error;
-          });*/
 
       };
 

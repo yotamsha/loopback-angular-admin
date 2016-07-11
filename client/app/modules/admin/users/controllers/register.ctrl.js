@@ -11,7 +11,8 @@
    **/
   angular
     .module('com.module.users')
-    .controller('RegisterCtrl', function ($scope, $routeParams, $location, $filter, CoreService, User, AppAuth, gettextCatalog) {
+    .controller('RegisterCtrl', function ($scope, $routeParams, $location, $filter, CoreService, User,
+                                          AppAuth, gettextCatalog, $modalInstance, DialogsService) {
 
       $scope.registration = {
         firstName: '',
@@ -111,25 +112,16 @@
         delete $scope.registration.confirmPassword;
         $scope.user = User.save($scope.registration,
           function () {
-
-            $scope.loginResult = User.login({
-                include: 'user',
-                rememberMe: true
-              }, $scope.registration,
-              function () {
-                AppAuth.currentUser = $scope.loginResult.user;
-                CoreService.toastSuccess(gettextCatalog.getString(
-                  'Registered'), gettextCatalog.getString(
-                  'You are registered!'));
-                $location.path('/');
-              },
-              function (res) {
-                CoreService.toastWarning(gettextCatalog.getString(
-                  'Error signin in after registration!'), res.data.error
-                  .message);
-                $scope.loginError = res.data.error;
-              }
-            );
+            AppAuth.login($scope.registration, function(){
+              // success
+              $modalInstance.close();
+            }, function(res){
+              // error
+              CoreService.toastWarning(gettextCatalog.getString(
+                'Error signin in after registration!'), res.data.error
+                .message);
+              $scope.loginError = res.data.error;
+            });
 
           },
           function (res) {
@@ -139,6 +131,12 @@
           }
         );
       };
+      $scope.login = function () {
+        $modalInstance.close();
+        DialogsService.openDialog('login');
+
+      };
+
     })
     .directive('confirmPassword',
     function () {
