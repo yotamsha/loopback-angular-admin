@@ -29,7 +29,7 @@
             );
           })
           .catch(function (err) {
-              CoreService.toastSuccess(
+              CoreService.toastError(
                 gettextCatalog.getString('Error saving mk '),
                 gettextCatalog.getString('This MK could no be saved: ') + err
               );

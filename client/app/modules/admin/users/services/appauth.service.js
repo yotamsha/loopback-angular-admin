@@ -6,7 +6,7 @@
 
   angular
     .module('com.module.users')
-    .factory('AppAuth', function ($cookies, User, LoopBackAuth, $http, $q, $rootScope, ENV) {
+    .factory('AppAuth', function ($cookies, User, LoopBackAuth, $http, $q, $rootScope, ENV, $location) {
       var self = {
 
         sessionData : {
@@ -53,7 +53,7 @@
             delete $cookies['accessToken'];
             //Perform the Passport Logout
             $http.post(ENV.apiUrl + 'auth/logout');
-
+            $location.path("/");
           });
           self.sessionData.currentUser = null;
           $rootScope.$broadcast('USER_SESSION_CHANGED',self.sessionData);
@@ -109,7 +109,6 @@
               console.log('got user: ', response);
               self.sessionData.currentUser = response;
               $rootScope.$broadcast('USER_SESSION_CHANGED',self.sessionData);
-
               deferred.resolve(response);
             }, function (err) {
               self.sessionData.currentUser = null;
@@ -121,6 +120,19 @@
 
           });
           return deferred.promise;
+        },
+
+        requireUserRole: function (role) {
+          var deferred = $q.defer();
+          self.requestCurrentUser().then(function(user){
+            if (user && user.roles && _.findWhere(user.roles, {name : role})){
+              deferred.resolve(user);
+            } else {
+              $location.path('/');
+            }
+          });
+          return deferred.promise;
+
         },
 
         getCurrentUser: function () {

@@ -31,7 +31,16 @@
           abstract: true,
           url: '/admin',
           templateUrl: 'modules/core/views/admin.html',
-          controller: 'AdminBaseCtrl'
+          controller: 'AdminBaseCtrl',
+          resolve : {
+            user: [
+              'AppAuth',
+              function (AppAuth) {
+                return AppAuth.requireUserRole('admin');
+              }
+            ],
+          }
+
 
         })
         .state('app.admin.home', {

@@ -41,7 +41,7 @@
             );
           })
           .catch(function (err) {
-            CoreService.toastSuccess(
+            CoreService.toastError(
               gettextCatalog.getString('Error saving category '),
               gettextCatalog.getString('This category could no be saved: ') + err
             );

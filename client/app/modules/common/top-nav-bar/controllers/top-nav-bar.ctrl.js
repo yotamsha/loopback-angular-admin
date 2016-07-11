@@ -7,6 +7,7 @@
     .module('com.module.common')
     .controller('TopNavBarCtrl', function ($rootScope, $timeout, $scope, AppAuth, $state, DialogsService) {
       var ctrl = this;
+      ctrl.$state = $state;
       ctrl.currentUser = null;
       function userSessionUpdated(user) {
         ctrl.currentUser = user;

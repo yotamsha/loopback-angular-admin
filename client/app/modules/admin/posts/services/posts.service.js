@@ -42,7 +42,7 @@
             );
           })
           .catch(function (err) {
-              CoreService.toastSuccess(
+              CoreService.toastError(
                 gettextCatalog.getString('Error saving post '),
                 gettextCatalog.getString('This post could no be saved: ') + err
               );

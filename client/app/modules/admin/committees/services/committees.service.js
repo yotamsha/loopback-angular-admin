@@ -24,13 +24,13 @@
           .then(function () {
             CoreService.toastSuccess(
               gettextCatalog.getString('Committee saved'),
-              gettextCatalog.getString('Your category is safe with us!')
+              gettextCatalog.getString('Your committee is safe with us!')
             );
           })
           .catch(function (err) {
-              CoreService.toastSuccess(
+              CoreService.toastError(
                 gettextCatalog.getString('Error saving category '),
-                gettextCatalog.getString('This category could no be saved: ') + err
+                gettextCatalog.getString('This committee could no be saved: ') + err
               );
             }
           );
@@ -49,7 +49,7 @@
             }, function (err) {
               CoreService.toastError(
                 gettextCatalog.getString('Error deleting category'),
-                gettextCatalog.getString('Your category is not deleted! ') + err);
+                gettextCatalog.getString('Your committee is not deleted! ') + err);
               cancelCb();
             });
           },
