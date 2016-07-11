@@ -19,6 +19,14 @@ h1, h2, h3, h4, h5, h6 {
   Arial,
   sans-serif;
 }
+/*
+body {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 200% !important;
+  }
+  font-size: 200% !important;
+}
+*/
 
 a:hover {
   text-decoration: underline;
@@ -51,7 +59,7 @@ a:hover {
   border: 1px #ffffff solid;
   border-radius: 11px;
   height: 25px;
-  font-size: 12px;
+  font-size: 0.8em;
   margin: 3px;
   min-width: 50px;
   color: #ffffff;
