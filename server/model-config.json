@@ -76,7 +76,10 @@
   },
   "user": {
     "dataSource": "db",
-    "public": true
+    "public": true,
+    "options": {
+      "emailVerificationRequired": true
+    }
   },
   "Meta": {
     "dataSource": "db",
@@ -89,5 +92,8 @@
   "MK": {
     "dataSource": "db",
     "public": true
+  },
+  "Email": {
+    "dataSource": "Email"
   }
 }

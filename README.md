@@ -171,7 +171,7 @@ The GUI is built with [generator-angular](https://www.npmjs.org/package/generato
 These should help you quickly add code to your project. Further details tailored to this project might follow in the future.
 
 
-## Unit Testing using Karma/Jasmine
+## Client Unit Testing using Karma/Jasmine
 
     $ node_modules/.bin/karma start client/test/karma.conf.js
 
@@ -180,6 +180,16 @@ These should help you quickly add code to your project. Further details tailored
     INFO [PhantomJS 1.9.8 (Linux)]: Connected on socket aLJmRuSNUH2rPfpWgS3l with id 89641972
     PhantomJS 1.9.8 (Linux): Executed 1 of 1 SUCCESS (0.007 secs / 0.029 secs)
 
+## Server Unit Testing using Karma/Jasmine
+- Windows:
+
+      SET NODE_ENV=test
+      npm test
+    
+- Linux / Mac:
+    
+        NODE_ENV=test
+        npm test
 
 ### Useful commits
 

@@ -2,6 +2,9 @@ var loopback = require('loopback');
 var boot = require('loopback-boot');
 var app = module.exports = loopback();
 
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+
 // setup servers logging.
 var winston = require('winston');
 var logger = new (winston.Logger)({
@@ -45,12 +48,16 @@ app.start = function() {
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
+console.log("starting boot");
 boot(app, __dirname, function(err) {
   if (err) throw err;
+  console.log("boot finished");
 
   // start the server if `$ node server.js`
-  if (require.main === module)
+  if (require.main === module) {
     app.start();
+    console.log("starting app..")
+  }
 });
 
 
@@ -61,3 +68,11 @@ app.use(function(req, res, next) { // log each request
 
   next(); // Passing the request to the next handler in the stack.
 });
+
+var mung = require('express-mung');
+app.use(mung.json(
+  function transform(body, req, res) {
+    console.log(req.reqId + " * Response body: " + JSON.stringify(body));
+    return body;
+  }
+));

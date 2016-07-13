@@ -59,7 +59,8 @@
       //public
       'com.module.main',
       'com.module.category',
-      'com.module.post'
+      'com.module.post',
+      'com.module.welcome'
 
     ])
     .run(function ($rootScope, $cookies, gettextCatalog, AppAuth) {

@@ -3,6 +3,6 @@
     "mountPath": "/explorer"
   },
   "loopback-component-fixtures": {
-    "loadFixturesOnStartup": true
+    "loadFixturesOnStartup": false
   }
 }

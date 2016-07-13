@@ -31,10 +31,15 @@
           }
         ).$promise;
       };
-      
+
       this.upsertPost = function (post) {
         //return Post.categories.link({ id: post.id, fk: '2' }).$promise;
-        return Post.upsert(post).$promise
+        var postToSave = angular.copy(post);
+        if (postToSave.categories){
+          postToSave.__categories__ = postToSave.categories;
+          delete postToSave.categories;
+        }
+        return Post.upsert(postToSave).$promise
           .then(function () {
             CoreService.toastSuccess(
               gettextCatalog.getString('Post saved'),

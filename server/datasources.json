@@ -13,6 +13,23 @@
     "user": "root",
     "connector": "mysql"
   },
+  "Email": {
+    "name": "mail",
+    "defaultForType": "mail",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "SMTP",
+        "host": "smtp.gmail.com",
+        "secure": true,
+        "port": 465,
+        "auth": {
+          "user": "yotamsha@gmail.com",
+          "pass": "y066498007"
+        }
+      }
+    ]
+  },
   "transient": {
     "name": "transient",
     "connector": "transient"
