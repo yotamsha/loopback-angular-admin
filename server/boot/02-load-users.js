@@ -26,7 +26,8 @@ module.exports = function(app) {
         lastName: 'User',
         email: 'admin@admin.com',
         username: 'admin',
-        password: 'admin'
+        password: 'admin',
+        emailVerified : 1
       }]
     }, {
       name: 'users',
@@ -35,7 +36,9 @@ module.exports = function(app) {
         lastName: 'User',
         email: 'user@user.com',
         username: 'user',
-        password: 'user'
+        password: 'user',
+        emailVerified : 1
+
       }]
     }];
 
