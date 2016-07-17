@@ -18,7 +18,7 @@
   <div class="section-title">{{'Categories' | translate }}</div>
   <ul>
     <li ng-repeat="category in ctrl.categoriesList">
-      <a ui-sref="^.category({slug: category.slug, id: category.id})"
+      <a ui-sref="app.public.category({slug: category.slug, id: category.id})"
          ng-class="{active: ctrl.$stateParams.slug === category.slug }" >{{category.name}}</a>
     </li>
   </ul>
