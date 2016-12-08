@@ -31,7 +31,9 @@ var logger = new (winston.Logger)({
   ]
 });
 
-console.log = logger.info; // redirect logs through Winston.
+console.log = logger.info; // redirect console.log through Winston.
+console.error = logger.error; // redirect console.error through Winston.
+
 
 app.start = function() {
   // start the web server
